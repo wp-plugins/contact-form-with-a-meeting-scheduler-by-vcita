@@ -4,14 +4,14 @@ Donate link:
 Tags: vcita, contact page, contact form, contact, contact me, meetings, meeting, meet visitors , meet clients, acquire clients, scheduler, schedule, scheduling, booking, book meetings, appointments, sell time, services, give advice, advice , engage visitors, interact, interact with visitors , Video chat, Video conferencing, call, call button, phone call, bill, services, skype, appointment scheduler, meeting scheduler, video meeting, collect payments, online meeting, google calendar, record meetings 
 Requires at least: 2.8
 Tested up to: 3.2.1
-Stable tag: 1.0
+Stable tag: 1.0.1
  
 Don’t miss another visitor – an inviting Contact Form with built-in Meeting Appointment Scheduler, Video Meeting and Payment Processing Support
  
 == Description ==
 
 vCita offers an easier way for your visitors to approach you, ask for advice and schedule time to talk over video or phone.
-<br>vCita is not just a contact form – it is an all-in-one solution for contact requests, scheduling, video meetings, phone conferencing and payments processing.
+<br>vCita is not just a contact form - it is an all-in-one solution for contact requests, scheduling, video meetings, phone conferencing and payments processing.
 
 vCita helps you convert visitors into clients.
 = The Only Contact Form in Wordpress that provides a meeting scheduler! =
@@ -70,4 +70,4 @@ See <a href="http://www.vcita.com/about/faq">vCita FAQ page</a>
 
 == Screenshots ==
 
-1. allows any visitor to easily contact you or ask for a meeting
+1. Allows any visitor to easily contact you or ask for a meeting
