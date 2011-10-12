@@ -4,7 +4,7 @@ Donate link:
 Tags: vcita, contact page, contact form, contact, contact me, meetings, meeting, meet visitors , meet clients, acquire clients, scheduler, schedule, scheduling, booking, book meetings, appointments, sell time, services, give advice, advice , engage visitors, interact, interact with visitors , Video chat, Video conferencing, call, call button, phone call, bill, services, skype, appointment scheduler, meeting scheduler, video meeting, collect payments, online meeting, google calendar, record meetings 
 Requires at least: 2.8
 Tested up to: 3.2.1
-Stable tag: 1.0.1
+Stable tag: 1.1.0
  
 Don’t miss another visitor – an inviting Contact Form with built-in Meeting Appointment Scheduler, Video Meeting and Payment Processing Support
  
@@ -70,4 +70,15 @@ See <a href="http://www.vcita.com/about/faq">vCita FAQ page</a>
 
 == Screenshots ==
 
-1. Allows any visitor to easily contact you or ask for a meeting
+1. *vCita Contact Form* - Allows any visitor to easily contact you or ask for a meeting
+2. *vCita Contact Widget* - Can be integrated in any web page
+3. *vCita Scheduler Experience* - Your schedule is displayed when a visitor clicks "Set a Meeting"
+4. *vCita Scheduler Experience* - The visitor request is sent to you via email
+5. *vCita Scheduler Experience* - Meeting invite is sent to the visitor and you once meeting is accepted
+6. *vCita Web-Based Meeting Room* - You can meet with vCita Video Meeting or Phone Conference
+
+== Changelog == 
+ = Version 1.1.0 =
+ * Created a new and simplified design for the Contact Form Settings page
+ * Added the "Professional Title" field which can be specified while creating a new user
+ * New screenshots 
