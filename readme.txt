@@ -69,13 +69,12 @@ vCita also provides alternative smaller widgets that can fit anywhere in your we
 See <a href="http://www.vcita.com/about/faq">vCita FAQ page</a>
 
 == Screenshots ==
-
-1. *vCita Contact Form* - Allows any visitor to easily contact you or ask for a meeting
-2. *vCita Contact Widget* - Can be integrated in any web page
-3. *vCita Scheduler Experience* - Your schedule is displayed when a visitor clicks "Set a Meeting"
-4. *vCita Scheduler Experience* - The visitor request is sent to you via email
-5. *vCita Scheduler Experience* - Meeting invite is sent to the visitor and you once meeting is accepted
-6. *vCita Web-Based Meeting Room* - You can meet with vCita Video Meeting or Phone Conference
+1. **vCita Contact Form** - Allows any visitor to easily contact you or ask for a meeting
+1. **vCita Contact Widget** - Can be integrated in any web page
+1. **vCita Scheduler Experience** - Your schedule is displayed when a visitor clicks "Set a Meeting"
+1. **vCita Scheduler Experience** - The visitor request is sent to you via email
+1. **vCita Scheduler Experience** - Meeting invite is sent to the visitor and you once meeting is accepted
+1. **vCita Web-Based Meeting Room** - You can meet with vCita Video Meeting or Phone Conference
 
 == Changelog == 
  = Version 1.1.0 =
