@@ -20,7 +20,7 @@ vCita offers an enhanced contact form where your visitors can approach you, ask 
 * Payments processing
 
 vCita helps you convert visitors into clients.
-It can replace your contact form or add to any existing contact form you’ve already been using. 
+It can replace your contact form or add to any existing contact form you've already been using. 
 
 = The Only Contact Form in Wordpress that provides a meeting scheduler! =
 = Also comes as a Widget for scheduling  - See Screenshots =
@@ -42,7 +42,7 @@ To learn more - <a href="http://www.vcita.com/?autoplay=1&no_redirect=true">Take
  
 1. Connect to your Wordpress Admin Panel
 1. Click the "Plugins" menu on the left and choose "Add New".
-2. ??? NOTE: if you don’t have an “Add New” option you can manually add the plugin to your code directory (see instructions below)
+1. NOTE: if you don't have an "Add New" option you can manually add the plugin to your code directory (see instructions below)
 1. Search for "vCita".
 1. Install "Contact Form with a Meeting Scheduler by vCita".
 1. After installation has finished, click "Activate plugin". 
