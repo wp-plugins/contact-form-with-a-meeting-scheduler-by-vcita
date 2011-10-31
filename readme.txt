@@ -4,7 +4,7 @@ Donate link:
 Tags: Appointment Scheduler, bill, book meetings, collect payments, contact, contact form, contact me, contact page, custom form, web form, Google Calendar, meet clients, meeting scheduler, online meeting, phone conference, record meetings, scheduling, skype, vcita, video chat, Video conferencing, video meeting
 Requires at least: 2.8
 Tested up to: 3.2.1
-Stable tag: 1.2.0
+Stable tag: 1.2.1
  
 Don’t miss another visitor – an inviting Contact Form with built-in Meeting Appointment Scheduler, Video Meeting and Payment Processing Support
  
@@ -85,7 +85,7 @@ See <a href="http://www.vcita.com/about/faq">vCita FAQ page</a>
 == Changelog == 
  = Version 1.2.0 =
  * Redesign of the settings page 
- * Added a preview for the sidaber widget
+ * Added a preview for the sidebar widget
  * Added direct links to dedicated vCita settings 
  * Fixed a bug with the embedding of the shortcode 
  * Updated documentation 

@@ -6,7 +6,7 @@
  * Plugin URI: http://www.vcita.com
  * Description: Don't miss another visitor - an inviting Contact Form with built-in Appointment Scheduler and Video Meetings
  * Author: vCita.com
- * Version: 1.2.0
+ * Version: 1.2.1
  * Author URI: http://www.vcita.com
 */
 
