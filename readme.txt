@@ -84,6 +84,9 @@ See <a href="http://www.vcita.com/about/faq">vCita FAQ page</a>
 
 == Changelog == 
  = Version 1.2.0 =
+ * Updated Documentation
+ 
+ = Version 1.2.0 =
  * Redesign of the settings page 
  * Added a preview for the sidebar widget
  * Added direct links to dedicated vCita settings 
