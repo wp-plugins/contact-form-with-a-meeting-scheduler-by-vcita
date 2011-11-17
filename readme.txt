@@ -1,4 +1,4 @@
-=== Contact Form with a Meeting Scheduler by vCita ===
+﻿=== Contact Form with a Meeting Scheduler by vCita ===
 Contributors: vCita.com
 Donate link: 
 Tags: Appointment Scheduler, bill, book meetings, collect payments, contact, contact form, contact me, contact page, custom form, web form, Google Calendar, meet clients, meeting scheduler, online meeting, phone conference, record meetings, scheduling, skype, vcita, video chat, Video conferencing, video meeting
