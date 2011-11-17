@@ -6,7 +6,7 @@
  * Plugin URI: http://www.vcita.com
  * Description: Don't miss another visitor - an inviting Contact Form with built-in Appointment Scheduler and Video Meetings
  * Author: vCita.com
- * Version: 1.2.1
+ * Version: 1.3.0
  * Author URI: http://www.vcita.com
 */
 
@@ -154,9 +154,9 @@ function vcita_settings_menu() {
                     You can also use the following code to manually add vCita to any post or page :
 
                     <div style="display:block;margin-top:10px;">
-                        <input id="vcita_embed_type_contact" checked="checked" name="vcita_embed_type" type="radio" style="border:0 none;outline:0 none;" value="contact" onclick="vcita_toggle_preview('contact', '<?php echo $form_uid;?>');">
+                        <input id="vcita_embed_type_contact" checked="checked" name="vcita_embed_type" type="radio" style="border:0 none;outline:0 none;" value="contact" onclick="vcita_toggle_preview('contact', '<?php echo $form_uid;?>', true);">
 			            <label for="vcita_embed_type_contact" onclick="vcita_toggle_preview('contact', '<?php echo $form_uid;?>');">Contact Form</label>
-                        <input id="vcita_embed_type_widget" name="vcita_embed_type" type="radio" value="widget" style="border:0 none;outline:0 none;" onclick="vcita_toggle_preview('widget', '<?php echo $form_uid;?>');">
+                        <input id="vcita_embed_type_widget" name="vcita_embed_type" type="radio" value="widget" style="border:0 none;outline:0 none;" onclick="vcita_toggle_preview('widget', '<?php echo $form_uid;?>', true);">
 			            <label for="vcita_embed_type_widget" onclick="vcita_toggle_preview('widget', '<?php echo $form_uid;?>');">Widget</label>
                     </div>
 
@@ -168,6 +168,7 @@ function vcita_settings_menu() {
 
             <div style="display:block;clear:both;">
                 <br/>
+				<p>For more advanced options, please <a href="http://wordpress.org/extend/plugins/contact-form-with-a-meeting-scheduler-by-vcita/faq/">look at the FAQ</a></p>
                 <p><b>vCita has a lot more to offer! </b> <br/>
                     <a href="http://www.vcita.com/?autoplay=1&no_redirect=true" target="_blank">To learn more Take a Tour</a>
                 </p>
@@ -175,7 +176,15 @@ function vcita_settings_menu() {
         </div>
 
         <div style="float:left;">
-            <h4 style="clear:both;border-bottom:1px solid gray;padding-top: 0px;margin:0px;width:500px;">Preview:</h4>
+            <div style="clear:both;border-bottom:1px solid gray;padding: 0 0 5px 0;margin:0px;width:500px;overflow: hidden;">
+				<div style="float:left">Preview:</div>
+				<div style="float:left;padding: 0 0 0px 5px;line-height: 13px;">
+					<input id="vcita_preview_type_contact" checked="checked" name="vcita_preview_type" type="radio" style="border:0 none;outline:0 none;" value="contact" onclick="vcita_toggle_preview('contact', '<?php echo $form_uid;?>');">
+					<label for="vcita_preview_type_contact" onclick="vcita_toggle_preview('contact', '<?php echo $form_uid;?>');">Contact Form</label>
+					<input id="vcita_preview_type_widget" name="vcita_preview_type" type="radio" value="widget" style="border:0 none;outline:0 none;" onclick="vcita_toggle_preview('widget', '<?php echo $form_uid;?>');">
+					<label for="vcita_preview_type_widget" onclick="vcita_toggle_preview('widget', '<?php echo $form_uid;?>');">Widget</label>
+				</div>
+			</div>
             <p>
                 <div id="vcita_preview_contact_<?php echo $form_uid;?>" style="width:500px;">
                     <?php echo create_embed_code("contact", $vcita_widget['uid'], $vcita_widget['email'], $vcita_widget['first_name'], $vcita_widget['last_name'], '500px', '400px', $vcita_widget['prof_title'], empty($vcita_widget['uid'])) ?>
@@ -305,6 +314,7 @@ function vcita_uninstall() {
     update_option("vcita_widget", "");
 }
 
+
 /**
  * Update the settings link to point to the correct location
  */
@@ -380,14 +390,17 @@ function prepare_widget_settings($widget_type, $type) {
 
     if (!empty($vcita_widget["uid"])) {
         $first_time = false;
-        $disabled= "disabled=true title='To change your details please use the \"Edit Profile\" link bellow.'";
+        $disabled= "disabled=true title='To change your details, ";
 
         if ($vcita_widget['confirmed']) {
+			$disabled .= "please use the \"Edit Profile\" link below.'";
             $config_html = "<div style='clear:both;".$config_floating."text-align:left;display:block;padding:5px 0 10px 0;'>
                             <div style='margin-right:5px;".$config_floating."'><a href='http://www.vcita.com/settings?section=profile' target='_blank'>Edit Profile</a></div>
                             <div style='margin-right:5px;".$config_floating."'><a href='http://www.vcita.com/settings?section=schedule' target='_blank'>Edit Availability</a></div>
                             <div style='margin-right:5px;".$config_floating."'><a href='http://www.vcita.com/settings?section=configuration' target='_blank'>Meeting Preferences</a></div></div>";
-        }
+        } else {
+			$disabled .= "please follow the instructions emailed to ".$vcita_widget["email"]."'";	
+		}
 
     } else {
         $disabled = "";
@@ -473,22 +486,19 @@ function generate_or_validate_user($widget_params) {
  * @return array - raw_data and a success flag
  */
 function get_contents($url) {
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION ,1);
-    curl_setopt($ch, CURLOPT_HEADER,0);  // DO NOT RETURN HTTP HEADERS
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER  ,1);  // RETURN THE CONTENTS
-    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT  ,0);
+    $get_result = wp_remote_get($url);
 
-    $raw_data = curl_exec($ch);
     $success = true;
 
-    if (curl_errno($ch)) {
+    if ($get_result['response']['code'] != 200) {
+
         $success = false;
-        $raw_data = curl_error($ch);
+        $raw_data = $get_result['response']['message'];
+
+    } else {
+        $raw_data = $get_result['body'];
     }
 
-
-    curl_close($ch);
     return compact('raw_data', 'success');
 }
 
@@ -634,12 +644,15 @@ function create_user_message($vcita_widget, $update_made) {
 function embed_toggle_preview_visibility() {
 	?>
 	<script type='text/javascript'>
-	    function vcita_toggle_preview(type, rand) {
+	    function vcita_toggle_preview(type, rand, switchEmbed) {
 		    var widgetVisibility = (type == 'widget') ? 'block' : 'none';
 		    var contactVisibility = (type == 'contact') ? 'block' : 'none';
 
-		    document.getElementById('vcita_embed_contact_' + rand).style.display = contactVisibility;
-		    document.getElementById('vcita_embed_widget_' + rand).style.display = widgetVisibility;
+		    if (switchEmbed && document.getElementById('vcita_embed_contact_' + rand)  != null) {
+			    document.getElementById('vcita_embed_contact_' + rand).style.display = contactVisibility;
+			    document.getElementById('vcita_embed_widget_' + rand).style.display = widgetVisibility;
+		    }
+
 		    document.getElementById('vcita_preview_contact_' + rand).style.display = contactVisibility;
 		    document.getElementById('vcita_preview_widget_' + rand).style.display = widgetVisibility;
 	    }
