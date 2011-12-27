@@ -6,12 +6,12 @@
  * Plugin URI: http://www.vcita.com
  * Description: Don't miss another visitor - an inviting Contact Form with built-in Appointment Scheduler and Video Meetings
  * Author: vCita.com
- * Version: 1.4.0
+ * Version: 1.4.1
  * Author URI: http://www.vcita.com
 */
 
 
-define('VCITA_WIDGET_VERSION', '1.4.0');
+define('VCITA_WIDGET_VERSION', '1.4.1');
 
 
 /* --- Static initializer for Wordpress hooks --- */
@@ -80,9 +80,12 @@ function vcita_settings_menu() {
 	if ($update_made) {
 		if ($_POST['Submit'] == "Disable Page") {
 			trash_page($vcita_widget['page_id']);
-			
+				
+			$vcita_widget['contact_page_active'] = 'false';
+			update_option('vcita_widget', $vcita_widget);
+						
 		// Make sure page is live if requested to or as default
-		} else if ($_POST['Submit'] == "Activate Page" || $first_time) {
+		} else if ($_POST['Submit'] == "Activate Page" || $vcita_widget['contact_page_active'] == 'true') {
 			$vcita_widget = make_sure_page_published($vcita_widget);
 		}
 	}
@@ -669,6 +672,7 @@ function create_initial_parameters() {
 						   'prof_title' => "Consultant", 
 						   'new_install' => $old_params['new_install'],
 						   'version' => VCITA_WIDGET_VERSION,
+						   'contact_page_active' => 'true',
 						   'first_generate' => $old_params['first_generate'],
 						   'engage_active' => $old_params['new_install'] // Only active if this is new install
 						   );
@@ -724,6 +728,7 @@ function make_sure_page_published($vcita_widget) {
 	}
 
     $vcita_widget['page_id'] = $page_id;
+	$vcita_widget['contact_page_active'] = 'true';
 	update_option('vcita_widget', $vcita_widget);
 
 	return $vcita_widget;
