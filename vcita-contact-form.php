@@ -6,9 +6,12 @@
  * Plugin URI: http://www.vcita.com
  * Description: Don't miss another visitor - an inviting Contact Form with built-in Appointment Scheduler and Video Meetings
  * Author: vCita.com
- * Version: 1.3.0
+ * Version: 1.4.0
  * Author URI: http://www.vcita.com
 */
+
+
+define('VCITA_WIDGET_VERSION', '1.4.0');
 
 
 /* --- Static initializer for Wordpress hooks --- */
@@ -17,15 +20,50 @@ add_action('plugins_loaded', 'vcita_init');
 add_shortcode('vCitaContact','vcita_add_contact');
 add_action('admin_menu', 'vcita_admin_actions');
 add_filter('plugin_action_links', 'add_settings_link', 10, 2 );
+add_action('wp_head', 'vcita_add_active_engage');
+
 
 /* --- Wordpress Hooks Implementations --- */
+
+/**
+ * Add the JS code for the vCita Active Engage feature
+ */
+function vcita_add_active_engage() {
+	$vcita_widget = (array) get_option('vcita_widget');
+	
+	if (!empty($vcita_widget['uid']) && !is_admin() && $vcita_widget['engage_active'] == 'true') {
+		// Will be added to the head of the page
+		?>
+		 <script type="text/javascript">//<![CDATA[
+			var vcHost = document.location.protocol == "https:" ? "https://" : "http://";
+			var vcUrl = "www.vcita.com/" + "<?php echo $vcita_widget['uid'] ?>" + '/loader.js';
+			document.write(unescape("%3Cscript src='" + vcHost + vcUrl + "' type='text/javascript'%3E%3C/script%3E"));	
+		//]]></script>
+		
+		<?php
+	}
+}
+
+/**
+ * Add the JS code for the Admin section vCita Active Engage feature
+ */
+function vcita_add_active_engage_admin() {
+	$vcita_widget = (array) get_option('vcita_widget');
+	
+	if (!empty($vcita_widget['uid'])) {
+		// Will be added to the head of the page
+		// Currently disabled
+		// wp_enqueue_script('vcita-engage', 'http://www.vcita.com/'.$vcita_widget['uid'].'/loader.js?auto_load=0');
+	}
+}
 
 /**
  *  Add the vCita widget to the "Settings" Side Menu
  */
 function vcita_admin_actions() {
     if ( function_exists('add_options_page') ) {
-        add_options_page("vcitaContact", "vCita Contact Form", 8, __FILE__, 'vcita_settings_menu');
+        $admin_page_suffix = add_options_page("vcitaContact", "vCita Contact Form", 8, __FILE__, 'vcita_settings_menu');
+		add_action('admin_print_scripts-'.$admin_page_suffix, 'vcita_add_active_engage_admin');
     }
 }
 
@@ -36,13 +74,15 @@ function vcita_admin_actions() {
  */
 function vcita_settings_menu() {
 
-	extract(prepare_widget_settings($_POST['vcita_widget-type'], "settings"));
+	extract(vcita_prepare_widget_settings($_POST['vcita_widget-type'], "settings"));
 
 	// Check the dedicated page flag - If it is on, make sure a page is available, if not - Trash the page
 	if ($update_made) {
 		if ($_POST['Submit'] == "Disable Page") {
 			trash_page($vcita_widget['page_id']);
-		} else {
+			
+		// Make sure page is live if requested to or as default
+		} else if ($_POST['Submit'] == "Activate Page" || $first_time) {
 			$vcita_widget = make_sure_page_published($vcita_widget);
 		}
 	}
@@ -64,24 +104,41 @@ function vcita_settings_menu() {
 	} else {
 		$form_hidden = "display:none";
 	}
-
-	embed_toggle_preview_visibility();
+	
+	vcita_embed_toggle_preview_visibility();
+	vcita_embed_control_engage_edit_visibility();
+	vcita_embed_validateEngageForm();
+	
+	if ($vcita_widget['engage_active'] == 'true') {
+		$engage_configure_visibility = "";
+		$engage_active_state = 'Currently Active'; 
+		$engage_active_style = 'color:green;font-weight:bold;';
+		$engage_toggle_action = 'Disable';
+	} else {
+		$engage_configure_visibility = "display:none;";
+		$engage_active_state = 'Currently Disabled';
+		$engage_active_style = 'color:red;font-weight:bold;';
+		$engage_toggle_action = 'Activate';
+	}
+	
+	
     ?>
     <div class="wrap" style="max-width:830px;">
         <h2><img src="http://www.vcita.com/images/logo.png"></h2>
-        <?php echo create_user_message($vcita_widget, $update_made); ?>
+        <?php echo vcita_create_user_message($vcita_widget, $update_made); ?>
 
         <?php if ($first_time) { ?>
             <div><p>To Create your Contact Form please provide your details below:</p></div>
 		<?php } ?>
 
-        <div style="float:left;margin-right:20px;width:300px;margin-top:5px;">
+        <div style="float:left;margin-right:20px;width:310px;margin-top:5px;">
 
         <form name="vcita_form" method="post" id="vcita_form_<?php echo $form_uid;?>" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>" style="<?php echo $form_hidden; ?>">
-			<div style="width:300px">
+			<input type="hidden" value="main_settings" name="form_type" />
+			<div style="width:310px">
 				<div style="display:block;clear:both;">
 					<span style="display:inline-block;width:110px;"><?php _e("Email: " ); ?></span>
-                    <input type="text" onkeypress="clearNames();" name="vcita_email" value="<?php echo $vcita_widget['email']; ?>" size="25">
+                    <input type="text" onkeypress="vcita_clearNames();" name="vcita_email" value="<?php echo $vcita_widget['email']; ?>" size="25">
                 </div>
 
                 <div style="display:block;clear:both;">
@@ -99,17 +156,17 @@ function vcita_settings_menu() {
                     <input type="text" name="vcita_prof-til" id="vcita_prof-til_<?php echo $form_uid;?>" <?php echo $disabled; ?> value="<?php echo $vcita_widget['prof_title']; ?>" size="25">
                 </div>
 
-                <input type="hidden" name="vcita_contact" value="Y">
                 <p class="submit" style="padding-top:5px;">
                     <input type="submit" style="float:left;" name="Submit" value="<?php _e('Save Settings') ?>" />
                     <?php if (!$first_time) { ?>
+						<input type="hidden" name="user_change" value="true" >
                         <a href="#" style="text-align:left;float:left;padding:5px 0 0 5px;"
                             onclick="document.getElementById('vcita_active_<?php echo $form_uid;?>').style.display='block';document.getElementById('vcita_form_<?php echo $form_uid;?>').style.display= 'none';">Cancel</a>
                     <?php } ?>
                 </p>
             </div>
         </form>
-
+		
         <?php if (!$first_time) { ?>
 			<div>
                 <div id="vcita_active_<?php echo $form_uid;?>">
@@ -123,25 +180,61 @@ function vcita_settings_menu() {
 
                 <?php echo $config_html; ?>
 
-                <h4 style="clear:both;border-bottom:1px solid gray;padding-top:10px;margin:0px;">vCita Contact Page:</h4>
+                <h4 style="clear:both;border-bottom:1px solid gray;padding-top:10px;margin:0px;">vCita Contact Page</h4>
 				<div style="margin-top:5px;">
                 <div style="float:left;line-height:20px;margin-right:5px;"><?php echo $page_status;?></div>
 
 				<form name="vcita_page_control_form" style="float:right;" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
-					<input type="hidden" name="vcita_page_control" value="Y" />
+					<input type="hidden" value="page_control" name="form_type" />
 					<input type="submit" style="float:left;width:100px;" name="Submit" value="<?php _e($page_action) ?>" />
 				</form>
 				</div>
-
-				<?php if ($page_available) { ?>
-					<div style="display:block;clear:both;"><a href="<?php echo get_page_edit_link($vcita_widget['page_id']); ?>">Edit your page</a></div>
-			        <?php } ?>
 			</div>
-
-        <?php } ?>
+				
+				
+			<h4 style="clear:both;float:left;border-bottom:1px solid gray;padding-top: 25px;margin:0px;width:100%;">
+				<span style="float:left;color:red;margin-right:5px;">New!</span>
+				<span style="float:left;">vCita Active Engage</span>
+				<a href="http://www.vcita.com/about/active_engage" style="float:right;text-decorations:none;" target="_blank">See an example</a>
+			</h4>
+			<div style="clear:both;margin-top:5px;">
+				<div style="display:block;margin-top:10px;">
+					<div >Generate more leads by actively purposing visitors</div>
+					<div style="float:left;">to contact - </div>
+					<div style="margin-left:2px;float:left;<?php echo $engage_active_style ?>"><?php echo $engage_active_state; ?></div>
+					<div style="clear:both;margin-top:8px;width:100%;float:left;" id="vcita_engage_configure_<?php echo $form_uid;?>">
+						<form id="vcita_engage_configure_control_<?php echo $form_uid ?>" name="vcita_engage_configure_control" style="float:right;" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
+							<input type="hidden" value="engage_enable_control" name="form_type" />
+							<input type="submit" style="float:left;width:100px;" name="Submit" value="<?php _e($engage_toggle_action) ?>" />
+						</form>
+						<input type="button" value="Configure" style="width:100px;float:right;<?php echo $engage_configure_visibility ?>" onclick='vcita_control_engage_edit_visibility("<?php echo $form_uid;?>", true)'>
+					</div>
+					
+					<div id="vcita_active_engage_details_<?php echo $form_uid;?>" style="margin-top:10px;clear:both;display:none;overflow:hidden;">
+						<form name="vcita_engage_form" method="post" id="vcita_engage_form_<?php echo $form_uid;?>" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>" onsubmit="return vcita_validateEngageForm('<?php echo $form_uid;?>');">
+							<input type="hidden" value="engage_settings" name="form_type" />
+							<div style="display:block;clear:both;margin-top:10px;">
+								<span >Wait</span>
+								<input type="text" name="vcita_engage-delay" style="width:30px;margin-left: 5px;" id="vcita_engage-delay_<?php echo $form_uid;?>" <?php echo $engage_disabled_attr; ?> <?php echo $engage_input_title; ?> value="<?php echo $vcita_widget['engage_delay']; ?>" size="25">
+								<span >seconds before approaching a visitor.</span>
+							</div>
+							<div style="display:block;">
+								<span>Include the following message:</span>
+								<textarea name="vcita_engage-text" style="width:300px;display:block;margin-top:5px;" rows="4" id="vcita_engage-text_<?php echo $form_uid;?>" <?php echo $engage_disabled_attr; ?> <?php echo $engage_input_title; ?> ><?php echo $vcita_widget['engage_text']; ?></textarea>
+							</div>
+							<div style="margin-top:10px">
+								<input type="submit" style="float:left;" name="Submit" value="<?php _e('Save Settings') ?>" >
+								<a href="#" id="vcita_engage_cancel_button_<?php echo $form_uid;?>" onclick="vcita_control_engage_edit_visibility('<?php echo $form_uid;?>', false);" style="margin-left:10px;display:none;"> Cancel</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		
+		<?php } ?>
 
         <?php if (!$first_time) { ?>
-            <h4 style="clear:both;border-bottom:1px solid gray;padding-top: 25px;margin:0px;">Add vCita to ALL pages as a sidebar:</h4>
+            <h4 style="clear:both;border-bottom:1px solid gray;padding-top: 25px;margin:0px;">Add vCita to ALL pages as a sidebar</h4>
             <div>
                 <ol>
                     <li><b>Click</b> the "Widgets" menu on the left (Under "Appearance"). <br/></li>
@@ -149,7 +242,7 @@ function vcita_settings_menu() {
                 </ol>
             </div>
 
-            <h4 style="clear:both;border-bottom:1px solid gray;padding-top: 25px;margin:0px;">Add vCita to an existing page:</h4>
+            <h4 style="clear:both;border-bottom:1px solid gray;padding-top: 25px;margin:0px;">Add vCita to an existing page</h4>
                 <div style="clear:both;margin-top:5px;">
                     You can also use the following code to manually add vCita to any post or page :
 
@@ -166,7 +259,7 @@ function vcita_settings_menu() {
                 </div>
         <?php } ?>
 
-            <div style="display:block;clear:both;">
+			<div style="display:block;clear:both;">
                 <br/>
 				<p>For more advanced options, please <a href="http://wordpress.org/extend/plugins/contact-form-with-a-meeting-scheduler-by-vcita/faq/">look at the FAQ</a></p>
                 <p><b>vCita has a lot more to offer! </b> <br/>
@@ -176,7 +269,7 @@ function vcita_settings_menu() {
         </div>
 
         <div style="float:left;">
-            <div style="clear:both;border-bottom:1px solid gray;padding: 0 0 5px 0;margin:0px;width:500px;overflow: hidden;">
+            <div style="clear:both;border-bottom:1px solid gray;padding: 0 0 5px 0;margin:0px;width:490px;overflow: hidden;">
 				<div style="float:left">Preview:</div>
 				<div style="float:left;padding: 0 0 0px 5px;line-height: 13px;">
 					<input id="vcita_preview_type_contact" checked="checked" name="vcita_preview_type" type="radio" style="border:0 none;outline:0 none;" value="contact" onclick="vcita_toggle_preview('contact', '<?php echo $form_uid;?>');">
@@ -186,11 +279,11 @@ function vcita_settings_menu() {
 				</div>
 			</div>
             <p>
-                <div id="vcita_preview_contact_<?php echo $form_uid;?>" style="width:500px;">
-                    <?php echo create_embed_code("contact", $vcita_widget['uid'], $vcita_widget['email'], $vcita_widget['first_name'], $vcita_widget['last_name'], '500px', '400px', $vcita_widget['prof_title'], empty($vcita_widget['uid'])) ?>
+                <div id="vcita_preview_contact_<?php echo $form_uid;?>" style="width:490px;">
+                    <?php echo vcita_create_embed_code("contact", $vcita_widget['uid'], $vcita_widget['email'], $vcita_widget['first_name'], $vcita_widget['last_name'], '490px', '400px', $vcita_widget['prof_title'], empty($vcita_widget['uid'])) ?>
                 </div>
-                <div id="vcita_preview_widget_<?php echo $form_uid;?>" style="display:none;width:500px;">
-                    <?php echo create_embed_code("widget", $vcita_widget['uid'], $vcita_widget['email'], $vcita_widget['first_name'], $vcita_widget['last_name'], '200px', '400px', $vcita_widget['prof_title'], empty($vcita_widget['uid'])) ?>
+                <div id="vcita_preview_widget_<?php echo $form_uid;?>" style="display:none;width:490px;">
+                    <?php echo vcita_create_embed_code("widget", $vcita_widget['uid'], $vcita_widget['email'], $vcita_widget['first_name'], $vcita_widget['last_name'], '200px', '400px', $vcita_widget['prof_title'], empty($vcita_widget['uid'])) ?>
                 </div>
             </p>
         </div>
@@ -204,7 +297,7 @@ function vcita_settings_menu() {
  * This is based on Wordpress guidelines for creating a single widget.
  */
 function vcita_widget_admin() {
-    extract(prepare_widget_settings("", "widget"));
+    extract(vcita_prepare_widget_settings("", "widget"));
 
     ?>
 
@@ -215,7 +308,7 @@ function vcita_widget_admin() {
         <hr style="margin: 15px 0;"/>
         <div id="vcita_config_params" style="text-align:right;">
             <label style="display:block;line-height:30px;text-align:left;"> Email:
-                <input type="text" onkeypress="clearNames();" style="float:right;" id="vcita_email" name="vcita_email" value="<?php echo ($vcita_widget['email']); ?>" />
+                <input type="text" onkeypress="vcita_clearNames();" style="float:right;" id="vcita_email" name="vcita_email" value="<?php echo ($vcita_widget['email']); ?>" />
             </label>
             <label style="display:block;line-height:30px;text-align:left;"> First Name:
                 <input type="text" style="float:right;" id="vcita_first-name_<?php echo $form_uid;?>" name="vcita_first-name"  <?php echo $disabled; ?> value="<?php echo ($vcita_widget['first_name']); ?>" />
@@ -226,14 +319,24 @@ function vcita_widget_admin() {
 			<label style="display:block;line-height:30px;text-align:left;"> Prof. Title:
                 <input type="text" style="float:right;" id="vcita_prof-til_<?php echo $form_uid;?>" name="vcita_prof-til"  <?php echo $disabled; ?> value="<?php echo ($vcita_widget['prof_title']); ?>" />
             </label>
+			
+			<?php echo vcita_create_theme_selection($vcita_widget); ?>
 
-            <?php echo create_user_message($vcita_widget, $update_made); ?>
+            <?php echo vcita_create_user_message($vcita_widget, $update_made); ?>
             <?php echo $config_html; ?>
         </div>
     </div>
 
     <?php
 }
+
+/** 
+ * Doc
+ */ 
+function vcita_create_theme_selection($widget_params) {
+
+}
+
 
 /**
  * Use the current settings and create the vCita widget. - simply call the main vcita_add_contact function with the required parameters
@@ -276,6 +379,7 @@ function vcita_add_contact($atts) {
         'title' => '',
         'width' => '100%',
         'height' => '400px',
+		'theme' => 'blue',
     ), $atts));
 
     if (!empty($title)) {
@@ -286,7 +390,7 @@ function vcita_add_contact($atts) {
         $id = $uid;
     }
 
-    return create_embed_code($type, $id, $email, $first_name, $last_name, $width, $height, $prof_title, false);
+    return vcita_create_embed_code($type, $id, $email, $first_name, $last_name, $width, $height, $prof_title, false, $theme);
 }
 
 /**
@@ -297,11 +401,12 @@ function vcita_init() {
         return;
     }
 
+	vcita_initialize_data();
+		
     wp_register_sidebar_widget('vcita_widget_id', 'vCita Contact Widget', 'vcita_widget_content', array('description' => "Encourage visitors to contact or schedule meetings with you."));
     wp_register_widget_control('vcita_widget_id', 'vCita Contact Widget', 'vcita_widget_admin', array('description' => "Encourage visitors to contact or schedule meetings with you."));
 
     register_uninstall_hook(__FILE__, 'vcita_uninstall');
-    register_deactivation_hook(__FILE__, 'vcita_uninstall');
 }
 
 /**
@@ -311,7 +416,27 @@ function vcita_uninstall() {
     $vcita_widget = (array) get_option('vcita_widget');
     trash_page($vcita_widget["page_id"]);
 
-    update_option("vcita_widget", "");
+    delete_option("vcita_widget");
+}
+
+/**
+ * Initialiaze the widget data system params
+ */
+function vcita_initialize_data() {
+	$vcita_widget = (array) get_option('vcita_widget');
+	
+	// Save if this is a new installation or not.
+	if (empty($vcita_widget) || is_null($vcita_widget['uid'])) {
+		$vcita_widget = array ('new_install' => 'true');
+
+	} else if ($vcita_widget['new_install'] != 'true')  {
+		$vcita_widget['new_install'] = 'false';
+	}
+	
+	// Currently no migration is needed
+	$vcita_widget['version'] = VCITA_WIDGET_VERSION;
+	
+	update_option('vcita_widget', $vcita_widget);
 }
 
 
@@ -348,7 +473,7 @@ function get_page_edit_link($page_id) {
  *
  * @param widget_type - The type of widget to be stored for next usage
  */
-function prepare_widget_settings($widget_type, $type) {
+function vcita_prepare_widget_settings($widget_type, $type) {
     $form_uid = rand();
     $uninitialized = false;
 
@@ -361,14 +486,14 @@ function prepare_widget_settings($widget_type, $type) {
         // Create a initial parameters
         if (is_null($vcita_widget['created'])) {
             $vcita_widget = create_initial_parameters();
-	    $uninitialized = true;
+			$uninitialized = true;
         }
 
     } else {
         //Form data sent
         $update_made = true;
 
-        if ($_POST["vcita_page_control"] == "Y") {
+        if ($_POST["form_type"] == "page_control") {
             $vcita_widget = (array) get_option('vcita_widget');
         } else {
             $vcita_widget = (array) save_user_params($widget_type);
@@ -407,7 +532,7 @@ function prepare_widget_settings($widget_type, $type) {
         $first_time = true;
     }
 
-    embed_clear_names(array("vcita_first-name_".$form_uid, "vcita_last-name_".$form_uid, "vcita_prof-til_".$form_uid));
+    vcita_embed_clear_names(array("vcita_first-name_".$form_uid, "vcita_last-name_".$form_uid, "vcita_prof-til_".$form_uid));
 
     return compact('vcita_widget', 'disabled', 'config_html', 'form_uid', 'update_made', 'first_time');
 }
@@ -418,26 +543,40 @@ function prepare_widget_settings($widget_type, $type) {
 function save_user_params($widget_type) {
     $vcita_widget = (array) get_option('vcita_widget');
 
-    if (!is_null($_POST['vcita_title'])) {
-        $vcita_widget['title'] = stripslashes($_POST['vcita_title']);
-    }
+	if ($_POST['form_type'] == 'engage_settings') {
+		$vcita_widget['engage_text'] = stripslashes($_POST['vcita_engage-text']);
+		$vcita_widget['engage_delay'] = $_POST['vcita_engage-delay'];
+		
+	} else if ($_POST['form_type'] == 'engage_enable_control') {
+		$vcita_widget['engage_active'] = ($_POST['Submit'] == 'Activate') ? 'true' : 'false';
+	
+	} else {
+		if (!is_null($_POST['vcita_title'])) {
+			$vcita_widget['title'] = stripslashes($_POST['vcita_title']);
+		}
 
-    $vcita_widget['created'] = 1;
-    $vcita_widget['email'] = $_POST['vcita_email'];
-    $vcita_widget['first_name'] = stripslashes($_POST['vcita_first-name']);
-    $vcita_widget['last_name'] = stripslashes($_POST['vcita_last-name']);
-    $vcita_widget['prof_title'] = stripslashes($_POST['vcita_prof-til']);
+		$vcita_widget['created'] = 1;
+		$vcita_widget['email'] = $_POST['vcita_email'];
+		$vcita_widget['first_name'] = stripslashes($_POST['vcita_first-name']);
+		$vcita_widget['last_name'] = stripslashes($_POST['vcita_last-name']);
+		$vcita_widget['prof_title'] = stripslashes($_POST['vcita_prof-til']);
 
-    if ($_POST['vcita_contact'] == 'Y') {
-        $vcita_widget['dedicated_page'] = $_POST['vcita_dedicated-page'];
-    }
-
-    if (!empty($widget_type)) {
-        $vcita_widget['widget_type'] = $widget_type;
-    }
+		if ($_POST['main_settings'] == 'Y') {
+			$vcita_widget['dedicated_page'] = $_POST['vcita_dedicated-page'];
+		}
+		
+		if (!empty($widget_type)) {
+			$vcita_widget['widget_type'] = $widget_type;
+		}
+		
+		if (!empty($_POST['user_change'])) {
+			$vcita_widget['engage_text'] = null;
+			$vcita_widget['engage_delay'] = null;
+		}
+	}
 
     update_option('vcita_widget', $vcita_widget);
-
+	
     return $vcita_widget;
 }
 
@@ -447,15 +586,18 @@ function save_user_params($widget_type) {
  * @return array of the user name, id and if he finished the registration or not
  */
 function generate_or_validate_user($widget_params) {
-    extract(get_contents("http://www.vcita.com/experts/widgets/otf?email=" .
+    extract(vcita_get_contents("http://www.vcita.com/experts/widgets/otf?email=" .
                         urlencode($widget_params['email']).
+						"&engage_text=" .urlencode($widget_params['engage_text']).
+						"&engage_delay=" .urlencode($widget_params['engage_delay']).
                         "&first_name=" .urlencode($widget_params['first_name']).
                         "&last_name=" . urlencode($widget_params['last_name']).
                         "&professional_title=".urlencode($widget_params['prof_title']).
                         "&api=true&enforce=true&ref=wp"));
-
+						
+	$first_generate = empty($widget_params['first_generate']);
     $widget_params['uid'] = '';
-
+	
     if (!$success) {
         $widget_params['last_error'] = "Temporary problems, please try again";
 
@@ -466,14 +608,23 @@ function generate_or_validate_user($widget_params) {
         if ($data->{'success'} == 1) {
             $widget_params['first_name'] = $data->{'first_name'};
             $widget_params['last_name'] = $data->{'last_name'};
+			$widget_params['engage_delay'] = $data->{'engage_delay'};
+			$widget_params['engage_text'] = $data->{'engage_text'};
             $widget_params['prof_title'] = $data->{'title'};
             $widget_params['confirmed'] = $data->{'confirmed'};
             $widget_params['last_error'] = "";
-            $widget_params['uid'] = $data->{'id'};
+			$widget_params['uid'] = $data->{'id'};
+			
+			// Because of an uninstall bug in version perior to 1.4, 
+			// engage is enabled by default only for new users.
+			if ($first_generate) {
+				$widget_params['engage_active'] = empty($data->{'confirmation_token'}) ? 'false' : 'true';
+				$widget_params['first_generate'] = 'true';
+			}
+			
 
         } else {
             $widget_params['last_error'] = $data-> {'error'};
-
         }
     }
 
@@ -485,19 +636,23 @@ function generate_or_validate_user($widget_params) {
  * @param $url
  * @return array - raw_data and a success flag
  */
-function get_contents($url) {
+function vcita_get_contents($url) {
     $get_result = wp_remote_get($url);
 
-    $success = true;
+    $success = false;
+    $raw_data = "Unknown error";
 
-    if ($get_result['response']['code'] != 200) {
-
-        $success = false;
-        $raw_data = $get_result['response']['message'];
-
-    } else {
-        $raw_data = $get_result['body'];
-    }
+    if (is_wp_error($get_result)) {
+		$raw_data = $get_result->get_error_message();
+		
+    } elseif (!empty($get_result['response'])) {
+		if ($get_result['response']['code'] != 200) {
+	        $raw_data = $get_result['response']['message'];
+	    } else {
+	        $success = true;
+	        $raw_data = $get_result['body'];
+	    }
+	}
 
     return compact('raw_data', 'success');
 }
@@ -506,15 +661,26 @@ function get_contents($url) {
  * Initials the vCita Widget parameters
  */
 function create_initial_parameters() {
-    $widget_params = array('title' => "Contact me using vCita", 'dedicated_page' => 'on', 'prof_title' => "Consultant");
-
-    return $widget_params;
+	$old_params = (array) get_option('vcita_widget');
+	
+    $vcita_widget = array('title' => "Contact me using vCita", 
+						   'dedicated_page' => 'on', 
+						   'uid' => '',
+						   'prof_title' => "Consultant", 
+						   'new_install' => $old_params['new_install'],
+						   'version' => VCITA_WIDGET_VERSION,
+						   'first_generate' => $old_params['first_generate'],
+						   'engage_active' => $old_params['new_install'] // Only active if this is new install
+						   );
+	update_option('vcita_widget', $vcita_widget);
+	
+    return $vcita_widget;
 }
 
 /**
  * Create the The iframe HTML Tag according to the given paramters
  */
-function create_embed_code($type, $uid, $email, $first_name, $last_name, $width, $height, $prof_title, $preview) {
+function vcita_create_embed_code($type, $uid, $email, $first_name, $last_name, $width, $height, $prof_title, $preview, $theme) {
     $preview_text = "";
 
     if ($preview) {
@@ -527,10 +693,10 @@ function create_embed_code($type, $uid, $email, $first_name, $last_name, $width,
 
         $code = "<iframe frameborder='0' src='http://www.vcita.com/experts/widgets/otf/?email=".urlencode($email).
                 "&first_name=".urlencode($first_name)."&last_name=".urlencode($last_name)."&enforce=true&widget=" . $type.
-                $title."&ref=wp".$preview_text."' width='".$width."' height='".$height."'></iframe>";
+                $title."&ref=wp".$preview_text."&theme=".$theme."' width='".$width."' height='".$height."'></iframe>";
 
     } else {
-        $code = "<iframe frameborder='0' src='http://www.vcita.com/" . urlencode($uid) . "/" . $type . "/?ref=wp".
+        $code = "<iframe frameborder='0' src='http://www.vcita.com/" . urlencode($uid) . "/" . $type . "/?ref=wp&theme=".$theme.
         $preview_text."' width='".$width."' height='".$height."'></iframe>";
     }
 
@@ -566,8 +732,6 @@ function make_sure_page_published($vcita_widget) {
 /**
  * Check that the page is available and published
  */
-
-
 function is_page_available($vcita_widget) {
 	$page_id = $vcita_widget['page_id'];
 	$page = get_page($page_id);
@@ -604,7 +768,7 @@ function trash_page($page_id) {
  * Create the message which will be displayed to the user after performing an update to the widget settings.
  * The message is created according to if an error had happen and if the user had finished the registration or not.
  */
-function create_user_message($vcita_widget, $update_made) {
+function vcita_create_user_message($vcita_widget, $update_made) {
 
     if (!empty($vcita_widget['uid'])) {
 
@@ -622,7 +786,7 @@ function create_user_message($vcita_widget, $update_made) {
                 $message .= "<br/><br/>";
             }
 
-            $message .= "An email was sent to: <b>".$vcita_widget['email'].
+            $message .= "New account created for <b>".$vcita_widget['email'].
                         "</b>, please follow instructions in the email to complete vCita configuration.";
         }
 
@@ -638,10 +802,41 @@ function create_user_message($vcita_widget, $update_made) {
     }
 }
 
+function vcita_embed_control_engage_edit_visibility() {
+	?>
+	<script type='text/javascript'>
+	
+		function vcita_control_engage_edit_visibility(rand, show) {
+			details = document.getElementById('vcita_active_engage_details_' + rand);
+			configure_button = document.getElementById('vcita_engage_configure_' + rand);
+			control_button = document.getElementById('vcita_engage_configure_control_' + rand);
+			cancel_button = document.getElementById('vcita_engage_cancel_button_' + rand);
+			delay_input = document.getElementById('vcita_engage-delay_' + rand);
+			text_input = document.getElementById('vcita_engage-text_' + rand);
+			
+			cancel_button.style.display = (show) ? "" : "none";
+			details.style.display = (show) ? "block" : "none";
+			configure_button.style.display = (show) ? "none" : "block";
+			control_button.style.display = (show) ? "none" : "block";
+			
+			if (show) {
+				delay_input.setAttribute('original-value', delay_input.value);
+				text_input.setAttribute('original-value', text_input.value);
+			} else {
+				delay_input.value = delay_input.getAttribute('original-value');
+				text_input.value = text_input.getAttribute('original-value');
+			}
+			
+		}
+	</script>
+	<?php
+}
+
+
 /**
  * Embed the function for toggling the preview visibility
  */
-function embed_toggle_preview_visibility() {
+function vcita_embed_toggle_preview_visibility() {
 	?>
 	<script type='text/javascript'>
 	    function vcita_toggle_preview(type, rand, switchEmbed) {
@@ -661,16 +856,47 @@ function embed_toggle_preview_visibility() {
 }
 
 /**
- * Create a Javascript function which go over on all the given ids and for each, clear the field and enable it
+ * Embed the function for validation the engage form before submission.
+ * Fields should be filled and the delay field should contain integers over 0
  */
-function embed_clear_names($ids) {
+function vcita_embed_validateEngageForm() {
 	?>
 	<script type='text/javascript'>
-		function clearNames() {
+		function vcita_validateEngageForm(rand) {
+			engage_text = document.getElementById('vcita_engage-text_' + rand);
+			engage_delay = document.getElementById('vcita_engage-delay_' + rand);
+			valid = false;
+			
+			// Validating the data is correct
+			// 1. Engage Text is available and larger than minimum size of 2
+			// 2. Delay available and is a number
+			if (engage_text.value == null || engage_text.value.replace(/^\s+|\s+$/g,"").length < 2) {
+				alert("Please specify the text you would like to use");
+			} else if (engage_delay.value == null || 
+					   engage_delay.value.replace(/^\s+|\s+$/g,"") == "" || 
+					   isNaN(parseInt(engage_delay.value.replace(/^\s+|\s+$/g,"")))) {
+				alert("Please make sure to set a valid number of seconds (10 to 20 is recommended)");
+			} else {
+				valid = true;
+			}
+			
+			return valid;
+		}
+	</script>
+	<?php
+}
+
+/**
+ * Create a Javascript function which go over on all the given ids and for each, clear the field and enable it
+ */
+function vcita_embed_clear_names($ids) {
+	?>
+	<script type='text/javascript'>
+		function vcita_clearNames() {
 
 	<?php
 		foreach ($ids as $id) {
-			embed_clear_name($id);
+			vcita_embed_clear_name($id);
 		}
 	?>
 
@@ -685,7 +911,7 @@ function embed_clear_names($ids) {
  *
  * This only changes fields which are disabled
  */
-function embed_clear_name($id) {
+function vcita_embed_clear_name($id) {
 	?>
     element = document.getElementById("<?php echo $id ?>");
 

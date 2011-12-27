@@ -1,10 +1,10 @@
 ﻿=== Contact Form with a Meeting Scheduler by vCita ===
 Contributors: vCita.com
 Donate link: 
-Tags: Appointment Scheduler, bill, book meetings, collect payments, contact, contact form, contact me, contact page, custom form, web form, Google Calendar, meet clients, meeting scheduler, online meeting, phone conference, record meetings, scheduling, skype, vcita, video chat, Video conferencing, video meeting
+Tags: Appointment Scheduler, bill, book meetings, collect payments, contact, contact form, contact me, contact page, custom form, web form, Google Calendar, meet clients, meeting scheduler, online meeting, phone conference, record meetings, scheduling, skype, vcita, video chat, Video conferencing, video meeting, support
 Requires at least: 2.8
-Tested up to: 3.2.1
-Stable tag: 1.3.0
+Tested up to: 3.3
+Stable tag: 1.4.0
  
 Don't miss another visitor - an inviting Contact Form with built-in Meeting Appointment Scheduler, Video Meeting and Payment Processing Support
  
@@ -34,12 +34,13 @@ It can replace your contact form or add to any existing contact form you've alre
 * Record your meetings 
 * Collect payments and bill for your time and services
 * Send a payment request once a meeting is completed or secure a fee in advance according to your hourly rate
+
+= Web Designer or Web Programmer? = 
+We have a partnership plan where you can make profit for every client that ends up using our product. Contact us at web-affiliate@vcita.com to get started. 
  
-If you are a web designer or programmer we offer a referral fee for every client you set with vCita Business Subscription. 
-Contact us at web-affiliate@vcita.com to get started.
- 
-To learn more, <a href="http://www.vcita.com/?autoplay=1&no_redirect=true&invite=WP">Take a Tour</a>.
 [youtube http://www.youtube.com/watch?v=rv-O7gxwLbk ]
+
+To learn more about vCita, <a href="http://www.vcita.com/?invite=WP">visit vCita.com</a>.
 
 == Installation ==
  
@@ -100,7 +101,7 @@ When adding vCita manually to specific pages you can use the following code  sam
 Use the following code sample:<br>
 To place widget horizontally - [vCitaContact type=widget height=200]<br>
 Width is adjusted to the width of the page or frame the widget is added to.<br>
-You may also customize width by adding parameter widget=80% or widget=150.<br>
+You may also customize width by adding parameter width=80% or width=150.<br>
 <br>
 To have a widget that only contains buttons (no image or profile text) use the following code:<br>
 [vCitaContact type=widget height=110]<br>
@@ -134,13 +135,17 @@ For other FAQ about vCita web-service please refer to <a href="http://www.vcita.
 1. **vCita Web-Based Meeting Room** - You can meet with vCita Video Meeting or Phone Conference
 
 == Changelog == 
+ = Version 1.4.0= 
+ * Added the new vCita Active Engage feature
+ * Fixed that from future upgrades the widget won't be removed on upgrade.
+ 
  = Version 1.3.0 =
  * Removed the dependency with the curl library
  * Updated Documentation
  * Improved widget preview (Using the settings page)
  * Added FAQ
  
- = Version 1.2.0 =
+ = Version 1.2.2 =
  * Updated Documentation
  
  = Version 1.2.0 =
