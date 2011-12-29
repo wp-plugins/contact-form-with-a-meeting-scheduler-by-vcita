@@ -6,12 +6,12 @@
  * Plugin URI: http://www.vcita.com
  * Description: Don't miss another visitor - an inviting Contact Form with built-in Appointment Scheduler and Video Meetings
  * Author: vCita.com
- * Version: 1.4.1
+ * Version: 1.4.2
  * Author URI: http://www.vcita.com
 */
 
 
-define('VCITA_WIDGET_VERSION', '1.4.1');
+define('VCITA_WIDGET_VERSION', '1.4.2');
 
 
 /* --- Static initializer for Wordpress hooks --- */
@@ -684,7 +684,7 @@ function create_initial_parameters() {
 /**
  * Create the The iframe HTML Tag according to the given paramters
  */
-function vcita_create_embed_code($type, $uid, $email, $first_name, $last_name, $width, $height, $prof_title, $preview, $theme) {
+function vcita_create_embed_code($type, $uid, $email, $first_name, $last_name, $width, $height, $prof_title, $preview, $theme = 'blue') {
     $preview_text = "";
 
     if ($preview) {
