@@ -6,12 +6,12 @@
  * Plugin URI: http://www.vcita.com
  * Description: Don't miss another visitor - an inviting Contact Form with built-in Appointment Scheduler and Video Meetings
  * Author: vCita.com
- * Version: 1.4.2
+ * Version: 1.4.3
  * Author URI: http://www.vcita.com
 */
 
 
-define('VCITA_WIDGET_VERSION', '1.4.2');
+define('VCITA_WIDGET_VERSION', '1.4.3');
 
 
 /* --- Static initializer for Wordpress hooks --- */
@@ -202,7 +202,7 @@ function vcita_settings_menu() {
 			</h4>
 			<div style="clear:both;margin-top:5px;">
 				<div style="display:block;margin-top:10px;">
-					<div >Generate more leads by actively purposing visitors</div>
+					<div >Generate more leads by actively offering visitors</div>
 					<div style="float:left;">to contact - </div>
 					<div style="margin-left:2px;float:left;<?php echo $engage_active_style ?>"><?php echo $engage_active_state; ?></div>
 					<div style="clear:both;margin-top:8px;width:100%;float:left;" id="vcita_engage_configure_<?php echo $form_uid;?>">
