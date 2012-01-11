@@ -6,12 +6,12 @@
  * Plugin URI: http://www.vcita.com
  * Description: Don't miss another visitor - an inviting Contact Form with built-in Appointment Scheduler and Video Meetings
  * Author: vCita.com
- * Version: 1.4.3
+ * Version: 1.4.4
  * Author URI: http://www.vcita.com
 */
 
 
-define('VCITA_WIDGET_VERSION', '1.4.3');
+define('VCITA_WIDGET_VERSION', '1.4.4');
 
 
 /* --- Static initializer for Wordpress hooks --- */
@@ -62,7 +62,7 @@ function vcita_add_active_engage_admin() {
  */
 function vcita_admin_actions() {
     if ( function_exists('add_options_page') ) {
-        $admin_page_suffix = add_options_page("vcitaContact", "vCita Contact Form", 8, __FILE__, 'vcita_settings_menu');
+		$admin_page_suffix = add_submenu_page('plugins.php', __('vCita Contact Form', 'vcitaContact'), __('vCita Contact Form', 'vcitaContact'), 'manage_options', __FILE__,'vcita_settings_menu');
 		add_action('admin_print_scripts-'.$admin_page_suffix, 'vcita_add_active_engage_admin');
     }
 }
@@ -451,7 +451,7 @@ function add_settings_link($links, $file) {
 	if (!$this_plugin) $this_plugin = plugin_basename(__FILE__);
 
 	if ($file == $this_plugin){
-		$settings_link = '<a href="' . admin_url("options-general.php?page=contact-form-with-a-meeting-scheduler-by-vcita/vcita-contact-form.php") . '">Settings</a>';
+		$settings_link = '<a href="' . admin_url("plugins.php?page=contact-form-with-a-meeting-scheduler-by-vcita/vcita-contact-form.php") . '">Settings</a>';
 		array_unshift($links, $settings_link);
 	}
 

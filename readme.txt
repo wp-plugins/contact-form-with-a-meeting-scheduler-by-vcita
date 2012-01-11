@@ -3,8 +3,8 @@ Contributors: vCita.com
 Donate link: 
 Tags: Appointment Scheduler, bill, book meetings, collect payments, contact, contact form, contact me, contact page, custom form, web form, Google Calendar, meet clients, meeting scheduler, online meeting, phone conference, record meetings, scheduling, skype, vcita, video chat, Video conferencing, video meeting, support
 Requires at least: 2.8
-Tested up to: 3.3
-Stable tag: 1.4.3
+Tested up to: 3.3.1
+Stable tag: 1.4.4
  
 Don't miss another visitor - an inviting Contact Form with built-in Meeting Appointment Scheduler, Video Meeting and Payment Processing Support
  
@@ -50,7 +50,7 @@ To learn more about vCita, <a href="http://www.vcita.com/?invite=WP">visit vCita
 1. Search for "vCita".
 1. Install "Contact Form with a Meeting Scheduler by vCita".
 1. After installation has finished, click "Activate plugin". 
-1. Click the "Settings" menu on the left and choose "vCita Contact Form".
+1. Click "vCita Contact Form" under the "Plugins" menu.
 1. Enter your e-mail address, first and last name and click "Save Settings".
 1. Follow instructions sent to you by email from vCita.com to complete configuration.
  
@@ -61,7 +61,7 @@ To learn more about vCita, <a href="http://www.vcita.com/?invite=WP">visit vCita
 1. Upload the "vcita-contact-form" folder to your server in "/wp-content/plugins" directory.
 1. Back on the admin panel click the "Plugins" menu on the left. 
 1. You should see the vCita Contact Form plugin listed in the available plugins. Click the "Activate" link below the plugin name.
-1. Click the "Settings" menu on the left and choose "vCita Contact Form".
+1. Click "vCita Contact Form" under the "Plugins" menu.
 1. Enter your e-mail address, first and last name and click "Save Settings".
 1. Follow instructions sent to you by email from vCita.com to complete configuration.
 
@@ -135,6 +135,9 @@ For other FAQ about vCita web-service please refer to <a href="http://www.vcita.
 1. **vCita Web-Based Meeting Room** - You can meet with vCita Video Meeting or Phone Conference
 
 == Changelog == 
+ = Version 1.4.4 =
+ * Moved vCita settings to be under the plugins menu
+ 
  = Version 1.4.3 =
  * Typo fix 
  
