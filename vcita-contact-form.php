@@ -2,9 +2,9 @@
 /*
  * vCita Plugin Description
  *
- * Plugin Name: Contact Form with a Meeting Scheduler by vCita
+ * Plugin Name: Next Gen Contact Form by vCita
  * Plugin URI: http://www.vcita.com
- * Description: Don't miss another visitor - an inviting Contact Form with built-in Appointment Scheduler and Video Meetings
+ * Description: vCita next generation contact form proves to increase the number of contact requests 
  * Author: vCita.com
  * Version: 1.4.4
  * Author URI: http://www.vcita.com

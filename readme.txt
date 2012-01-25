@@ -1,78 +1,66 @@
-﻿=== Contact Form with a Meeting Scheduler by vCita ===
+﻿=== Next Gen Contact Form by vCita ===
 Contributors: vCita.com
 Donate link: 
-Tags: Appointment Scheduler, bill, book meetings, collect payments, contact, contact form, contact me, contact page, custom form, web form, Google Calendar, meet clients, meeting scheduler, online meeting, phone conference, record meetings, scheduling, skype, vcita, video chat, Video conferencing, video meeting, support
+Tags: contact, contact form, contact me, contact page, custom form,  vcita, web form
 Requires at least: 2.8
 Tested up to: 3.3.1
 Stable tag: 1.4.4
  
-Don't miss another visitor - an inviting Contact Form with built-in Meeting Appointment Scheduler, Video Meeting and Payment Processing Support
+vCita next generation contact form proves to increase the number of contact requests 
  
 == Description ==
 
-vCita offers an enhanced contact form where your visitors can approach you, ask for advice and schedule time to talk over video or phone.
-<br>vCita is not just a contact form - it is an all-in-one solution for: 
+vCita Revolutionizes the old, traditional contact form by allowing website visitors to choose how they want to contact: 
+text messages, advanced online video chat, scheduled phone conversation or a face to face meeting.  
 
-* Contact requests
-* Scheduling
-* Video meetings
-* Phone Conferencing
-* Payments processing
+vCita can also actively engage visitors after spending some time on your website which has proven to, on average, double contact and meeting requests triggered by visitors. 
+Choose one of our attractive, customizable and easy to set up contact forms and give your online visitors the best contact experience exists online. And it’s all for FREE!!!
 
-vCita helps you convert visitors into clients.
-It can replace your contact form or add to any existing contact form you've already been using. 
+<a href="http://downloads.wordpress.org/plugin/contact-form-with-a-meeting-scheduler-by-vcita.zip">Download Wordpress plugin vCita Contact Form Version</a>
 
-= The Only Contact Form in Wordpress that provides a meeting scheduler! =
-= Also comes as a Widget for scheduling  - See Screenshots =
+vCita Contact Form Exclusive Features:
 
-* Setup your Contact Form in minutes and for FREE
-* Friendly and simple end user experience
-* Offer visitors to Schedule Meetings as part of your Contact Form
-* Set your availability and synchronize your contact form with your Google calendar
-* Meet online with web-based video meeting room 
-* Meet over phone conference 
-* Record your meetings 
-* Collect payments and bill for your time and services
-* Send a payment request once a meeting is completed or secure a fee in advance according to your hourly rate
+ * Easy and intuitive customizable contact form options from the admin setting page
+ * Actively invite your website visitors to contact you with new, engaging contact form formats
+ * Customize your own welcome message
+ * Choose vCita dynamic contact form format to increase website visitor engagement
+ * Offer visitors to Schedule Meetings as part of your Contact Form
+ * A dashboard to display your online traffic as well as latest contact form submissions
+ * Super easy customization of your contact form’s Meetings Calendar, optionally synchronized with your Google Calendar
+ * Create unlimited contact forms with different styles
+ * Get contact form notifications to your inbox
+ * Track when clients open and read your email response
+ * Manage all client interaction from a single advanced platform
+ * Collect payments and bill for your time and services
+ * ...and many more features!
+
+= Next Generation Contact Form = 
+These days, having a traditional contact form just doesn’t cut it. 
+vCita next generation contact form holds a variety of contact form styles for different locations on your website. 
+Whether it’s your homepage, contact page or if you want vCita active contact form invite visitors all across your website, 
+vCita will enable you to better engage with your website online audience while managing those leads and contacts effectively.
+
+Get vCita next generation Contact Form today! It’s FREE!!
 
 = Web Designer or Web Programmer? = 
 We have a partnership plan where you can make profit for every client that ends up using our product. Contact us at web-affiliate@vcita.com to get started. 
  
-[youtube http://www.youtube.com/watch?v=rv-O7gxwLbk ]
-
-To learn more about vCita, <a href="http://www.vcita.com/?invite=WP">visit vCita.com</a>.
+To learn more about vCita, <a href="http://www.vcita.com/?invite=WP">visit www.vcita.com</a>.
 
 == Installation ==
  
-1. Connect to your Wordpress Admin Panel
-1. Click the "Plugins" menu on the left and choose "Add New".
-1. NOTE: if you don't have an "Add New" option you can manually add the plugin to your code directory (see instructions below)
-1. Search for "vCita".
-1. Install "Contact Form with a Meeting Scheduler by vCita".
-1. After installation has finished, click "Activate plugin". 
-1. Click "vCita Contact Form" under the "Plugins" menu.
-1. Enter your e-mail address, first and last name and click "Save Settings".
-1. Follow instructions sent to you by email from vCita.com to complete configuration.
- 
-= How to manually add vCita Plugin  =
- 
-1. Click on the red "Download Version x.x" button on the right side of this page.
-1. After the download has finished, extract the files.
-1. Upload the "vcita-contact-form" folder to your server in "/wp-content/plugins" directory.
-1. Back on the admin panel click the "Plugins" menu on the left. 
-1. You should see the vCita Contact Form plugin listed in the available plugins. Click the "Activate" link below the plugin name.
-1. Click "vCita Contact Form" under the "Plugins" menu.
-1. Enter your e-mail address, first and last name and click "Save Settings".
-1. Follow instructions sent to you by email from vCita.com to complete configuration.
 
-= Additional Widgets =
-vCita also provides alternative smaller widgets that can fit anywhere in your website providing a similar contact and scheduling capabilities.
-<br>To integrate those widgets after installing and activating the plug-in:
+= Recommended installation =
 
-1. Click the "Widgets" menu on the left
-1. Drag the "vCita Widget" from the "Available Widgets" list to one of the widget "areas" in the right.
-1. In the widget parameter area, enter your email, first and last name and click "Save".
-1. Follow instructions sent to you by email to complete widget configuration
+1.	Connect to WordPress Admin Panel
+2.	Click the "Plugins" menu on the left and choose "Add New".
+    Search for “Next Gen Contact Form” and install it. 
+3.	After installation has finished, click "Activate".
+4.	Click the "Plugins" menu on the left and choose "vCita Contact Form".
+5.	Enter your e-mail address, first and last name and click "Save Settings".
+6.	Follow instructions sent to you by email from vCita.com to complete configuration.
+
+For manual installation instructions and additional contact widgets - look at the FAQ section
 
 == Frequently Asked Questions ==
 
@@ -106,6 +94,9 @@ You may also customize width by adding parameter width=80% or width=150.<br>
 To have a widget that only contains buttons (no image or profile text) use the following code:<br>
 [vCitaContact type=widget height=110]<br>
 <br>
+NOTE: if you are integrating the widget as a sidebar, you should use the "Text" widget and put use codes above.
+Do not use the vCita widget.
+<br>
 
 = I want to create my own widget format (colors, buttons etc) =
 You can create your own buttons to better match your site colors or style.<br>
@@ -125,16 +116,40 @@ Each user will get an email to confirm his email address and upload an image to 
 
 <br>
 For other FAQ about vCita web-service please refer to <a href="http://www.vcita.com/about/faq">vCita FAQ</a>
+<br>
+
+= How to manually add vCita Plugin  =
+ 
+1. Click on the red "Download Version x.x" button on the right side of this page.
+1. After the download has finished, extract the files.
+1. Upload the "vcita-contact-form" folder to your server in "/wp-content/plugins" directory.
+1. Back on the admin panel click the "Plugins" menu on the left. 
+1. You should see the vCita Contact Form plugin listed in the available plugins. Click the "Activate" link below the plugin name.
+1. Click "Next Gen Contact Form by vCita" under the "Plugins" menu.
+1. Enter your e-mail address, first and last name and click "Save Settings".
+1. Follow instructions sent to you by email from vCita.com to complete configuration.
+<br>
+
+= How to use vCita Widget =
+vCita also provides alternative smaller widgets that can fit anywhere in your website providing a similar contact and scheduling capabilities.
+<br>To integrate those widgets after installing and activating the plug-in:
+
+1. Click the "Widgets" menu on the left
+1. Drag the "vCita Widget" from the "Available Widgets" list to one of the widget "areas" in the right.
+1. In the widget parameter area, enter your email, first and last name and click "Save".
+1. Follow instructions sent to you by email to complete widget configuration
 
 == Screenshots ==
 
-1. **vCita Contact Form** - Allows any visitor to easily contact you or ask for a meeting
-1. **vCita Contact Widget** - Can be integrated in any web page
-1. **vCita Scheduler Experience** - Your schedule is displayed when a visitor clicks 'Set a Meeting'
-1. **vCita Scheduler Experience** - The visitor request is sent to you via email
-1. **vCita Web-Based Meeting Room** - You can meet with vCita Video Meeting or Phone Conference
+1. **Contact Form** - Allows any visitor to easily contact you or ask for a meeting
+1. **Active Contact Form** - Actively invite your site visitors
+1. **Active Contact Form** - floating mode after closed by the visitor
+1. **Management Platform** - Monitor traffic and manage your contacts, messages and meeting requests
+
 
 == Changelog == 
+ * Doc and plugin name change
+
  = Version 1.4.4 =
  * Moved vCita settings to be under the plugins menu
  
