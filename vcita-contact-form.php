@@ -6,12 +6,12 @@
  * Plugin URI: http://www.vcita.com
  * Description: vCita next generation contact form proves to increase the number of contact requests 
  * Author: vCita.com
- * Version: 1.4.5
+ * Version: 1.4.6
  * Author URI: http://www.vcita.com
 */
 
 
-define('VCITA_WIDGET_VERSION', '1.4.5');
+define('VCITA_WIDGET_VERSION', '1.4.6');
 
 
 /* --- Static initializer for Wordpress hooks --- */

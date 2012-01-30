@@ -4,7 +4,7 @@ Donate link:
 Tags: contact, contact form, contact me, contact page, custom form,  vcita, web form
 Requires at least: 2.8
 Tested up to: 3.3.1
-Stable tag: 1.4.5
+Stable tag: 1.4.6
  
 vCita next generation contact form proves to increase the number of contact requests 
  
@@ -148,6 +148,9 @@ vCita also provides alternative smaller widgets that can fit anywhere in your we
 
 
 == Changelog == 
+ = Version 1.4.6 =
+ * Image fixes
+ 
  = Version 1.4.5 =
  * Doc and plugin name change
 
