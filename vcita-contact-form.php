@@ -21,6 +21,7 @@ add_shortcode('vCitaContact','vcita_add_contact');
 add_action('admin_menu', 'vcita_admin_actions');
 add_filter('plugin_action_links', 'add_settings_link', 10, 2 );
 add_action('wp_head', 'vcita_add_active_engage');
+register_activation_hook( __FILE__, 'vcita_activate' );
 
 
 /* --- Wordpress Hooks Implementations --- */
@@ -66,6 +67,14 @@ function vcita_admin_actions() {
 		add_action('admin_print_scripts-'.$admin_page_suffix, 'vcita_add_active_engage_admin');
     }
 }
+
+/**
+ * Hook for the activate action - according to WP documentation, runs only on manual click on activate
+ */
+function vcita_activate() {
+	vcita_check_expert_available();
+}
+
 
 /**
  * Create the Main vCita Settings form content.
@@ -442,6 +451,31 @@ function vcita_initialize_data() {
 	update_option('vcita_widget', $vcita_widget);
 }
 
+/* 
+ * Check if the user is already available in vCita
+ */
+function vcita_check_expert_available() {
+	$widget_params = (array) get_option('vcita_widget');
+	
+	extract(vcita_get_contents("http://www.vcita.com/experts/check_available?ref=wp&email=".
+			urlencode(vcita_get_email($widget_params))."&new=".(is_null($widget_params['uid']) ? 'true' : 'false')));
+
+	if ($success && !empty($raw_data)) {
+		$data = json_decode($raw_data);
+		
+		if (!empty($data) && $data->{'available'}) {
+			$widget_params = vcita_parse_expert_data($success, $widget_params, $raw_data);
+			update_option('vcita_widget', $widget_params);
+		}
+	}
+}
+
+/** 
+ * Check the current user user - either by the saved property or from wordpress
+ */
+function vcita_get_email($widget_params) {
+	return empty($widget_params['email']) ? get_option('admin_email') : $widget_params['email'];
+}
 
 /**
  * Update the settings link to point to the correct location
@@ -598,6 +632,16 @@ function generate_or_validate_user($widget_params) {
                         "&professional_title=".urlencode($widget_params['prof_title']).
                         "&api=true&enforce=true&ref=wp"));
 						
+	return vcita_parse_expert_data($success, $widget_params, $raw_data);
+}
+
+/**
+ * Take the received data and parse it
+ * 
+ * Returns the newly updated widgets parameters.
+ */
+function vcita_parse_expert_data($success, $widget_params, $raw_data) {
+
 	$first_generate = empty($widget_params['first_generate']);
     $widget_params['uid'] = '';
 	
@@ -606,7 +650,6 @@ function generate_or_validate_user($widget_params) {
 
     } else {
         $data = json_decode($raw_data);
-        $widget_params['last_error'] = "Temporary problems, please try again";
 
         if ($data->{'success'} == 1) {
             $widget_params['first_name'] = $data->{'first_name'};
