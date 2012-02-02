@@ -4,7 +4,7 @@ Donate link:
 Tags: contact, contact form, contact me, contact page, custom form,  vcita, web form
 Requires at least: 2.8
 Tested up to: 3.3.1
-Stable tag: 1.4.6
+Stable tag: trunk
  
 vCita next generation contact form proves to increase the number of contact requests 
  
