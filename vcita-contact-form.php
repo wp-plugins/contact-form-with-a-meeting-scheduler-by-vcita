@@ -1,17 +1,15 @@
 <?php
 /*
- * vCita Plugin Description
- *
- * Plugin Name: Next Gen Contact Form by vCita
- * Plugin URI: http://www.vcita.com
- * Description: vCita next generation contact form proves to increase the number of contact requests 
- * Author: vCita.com
- * Version: 1.4.6
- * Author URI: http://www.vcita.com
+Plugin Name: Next Gen Contact Form by vCita
+Plugin URI: http://www.vcita.com
+Description: vCita next generation contact form proves to increase the number of contact requests 
+Version: 1.4.6
+Author: vCita.com
+Author URI: http://www.vcita.com
 */
 
 
-define('VCITA_WIDGET_VERSION', '1.4.6');
+define('VCITA_WIDGET_VERSION', '1.4.6.1');
 
 
 /* --- Static initializer for Wordpress hooks --- */
@@ -21,7 +19,6 @@ add_shortcode('vCitaContact','vcita_add_contact');
 add_action('admin_menu', 'vcita_admin_actions');
 add_filter('plugin_action_links', 'add_settings_link', 10, 2 );
 add_action('wp_head', 'vcita_add_active_engage');
-register_activation_hook( __FILE__, 'vcita_activate' );
 
 
 /* --- Wordpress Hooks Implementations --- */
@@ -67,14 +64,6 @@ function vcita_admin_actions() {
 		add_action('admin_print_scripts-'.$admin_page_suffix, 'vcita_add_active_engage_admin');
     }
 }
-
-/**
- * Hook for the activate action - according to WP documentation, runs only on manual click on activate
- */
-function vcita_activate() {
-	vcita_check_expert_available();
-}
-
 
 /**
  * Create the Main vCita Settings form content.
@@ -438,11 +427,20 @@ function vcita_initialize_data() {
 	$vcita_widget = (array) get_option('vcita_widget');
 	
 	// Save if this is a new installation or not.
-	if (empty($vcita_widget) || is_null($vcita_widget['uid'])) {
+	if (empty($vcita_widget) || (!isset($vcita_widget['uid']) && !isset($vcita_widget['version']))) {
 		$vcita_widget = array ('new_install' => 'true');
 
 	} else if ($vcita_widget['new_install'] != 'true')  {
 		$vcita_widget['new_install'] = 'false';
+	}
+	
+	if (!isset($vcita_widget['version'])) {
+		// New install 
+		$vcita_widget = vcita_check_expert_available($vcita_widget, 'new');
+		
+	} else if ($vcita_widget['version'] != VCITA_WIDGET_VERSION) {
+		// Upgrade 
+		$vcita_widget = vcita_check_expert_available($vcita_widget, $vcita_widget['version']);
 	}
 	
 	// Currently no migration is needed
@@ -454,20 +452,19 @@ function vcita_initialize_data() {
 /* 
  * Check if the user is already available in vCita
  */
-function vcita_check_expert_available() {
-	$widget_params = (array) get_option('vcita_widget');
-	
+function vcita_check_expert_available($widget_params, $vcita_version) {
 	extract(vcita_get_contents("http://www.vcita.com/experts/check_available?ref=wp&email=".
-			urlencode(vcita_get_email($widget_params))."&new=".(is_null($widget_params['uid']) ? 'true' : 'false')));
+			urlencode(vcita_get_email($widget_params))."&version=".VCITA_WIDGET_VERSION."&previous=".$vcita_version));
 
 	if ($success && !empty($raw_data)) {
 		$data = json_decode($raw_data);
 		
 		if (!empty($data) && $data->{'available'}) {
 			$widget_params = vcita_parse_expert_data($success, $widget_params, $raw_data);
-			update_option('vcita_widget', $widget_params);
 		}
 	}
+	
+	return $widget_params;
 }
 
 /** 

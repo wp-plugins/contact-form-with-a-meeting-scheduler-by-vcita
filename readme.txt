@@ -10,9 +10,13 @@ vCita next generation contact form proves to increase the number of contact requ
  
 == Description ==
 
-vCita Revolutionizes the old, traditional contact form by allowing website visitors to choose how they want to contact: text messages, advanced online video chat, scheduled phone conversation or a face to face meeting. vCita can also actively engage visitors after spending some time on your website which has proven to, on average, double contact and meeting requests triggered by visitors. 
+vCita Revolutionizes the old, traditional contact form by allowing website visitors to choose how they want to contact: text messages, advanced online video chat, scheduled phone conversation or a face to face meeting. 
+<BR>
+vCita can also actively engage visitors after spending some time on your website which has proven to, on average, double contact and meeting requests triggered by visitors. 
 
-vCita functionality can also be added on top of Fast Secure contact form, Contact Form 7 or any other traditional contact forms you currently use. Choose one of our attractive, customizable and easy to set up contact forms and give your online visitors the best contact experience exists online and it’s all for FREE!!!
+vCita functionality can also be added on top of Fast Secure contact form, Contact Form 7 or any other traditional contact forms you currently use. 
+<BR>
+Choose one of our attractive, customizable and easy to set up contact forms and give your online visitors the best contact experience exists online. Add it to your website now for FREE!
 
 <a href="http://downloads.wordpress.org/plugin/contact-form-with-a-meeting-scheduler-by-vcita.zip">Download Wordpress plugin vCita Contact Form Version</a>
 
