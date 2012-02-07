@@ -9,7 +9,7 @@ Author URI: http://www.vcita.com
 */
 
 
-define('VCITA_WIDGET_VERSION', '1.4.6.1');
+define('VCITA_WIDGET_VERSION', '1.4.6.2');
 
 
 /* --- Static initializer for Wordpress hooks --- */
@@ -558,7 +558,13 @@ function vcita_prepare_widget_settings($widget_type, $type) {
                             <div style='margin-right:5px;".$config_floating."'><a href='http://www.vcita.com/settings?section=schedule' target='_blank'>Edit Availability</a></div>
                             <div style='margin-right:5px;".$config_floating."'><a href='http://www.vcita.com/settings?section=configuration' target='_blank'>Meeting Preferences</a></div></div>";
         } else {
-			$disabled .= "please follow the instructions emailed to ".$vcita_widget["email"]."'";	
+			$disabled .= "please follow the instructions emailed to ".$vcita_widget["email"]."'";
+			
+			if (!empty($vcita_widget['confirmation_token'])) {
+				$config_html = "<div style='clear:both;float:right;text-align:right;display:block;padding:5px 0 10px 0;'>
+                                  <div style='margin-right:5px;".$config_floating."'><b><a href='http://www.vcita.com/users/confirmation?confirmation_token=".$vcita_widget['confirmation_token']."&o=int.4' target='_blank'>Set meeting preferences</a></b></div>
+							   </div>";
+			}
 		}
 
     } else {
@@ -640,7 +646,9 @@ function generate_or_validate_user($widget_params) {
 function vcita_parse_expert_data($success, $widget_params, $raw_data) {
 
 	$first_generate = empty($widget_params['first_generate']);
-    $widget_params['uid'] = '';
+    $previous_id = $widget_params['uid'];
+	$widget_params['uid'] = '';
+	
 	
     if (!$success) {
         $widget_params['last_error'] = "Temporary problems, please try again";
@@ -657,6 +665,10 @@ function vcita_parse_expert_data($success, $widget_params, $raw_data) {
             $widget_params['confirmed'] = $data->{'confirmed'};
             $widget_params['last_error'] = "";
 			$widget_params['uid'] = $data->{'id'};
+
+			if ($previous_id != $data->{'id'}) {
+				$widget_params['confirmation_token'] = $data->{'confirmation_token'};
+			}
 			
 			// Because of an uninstall bug in version perior to 1.4, 
 			// engage is enabled by default only for new users.
@@ -831,8 +843,13 @@ function vcita_create_user_message($vcita_widget, $update_made) {
                 $message .= "<br/><br/>";
             }
 
-            $message .= "New account created for <b>".$vcita_widget['email'].
-                        "</b>, please follow instructions in the email to complete vCita configuration.";
+            $message .= "<div style='overflow:hidden'><div>New account created for <b>".$vcita_widget['email']."</b>.</div><br><div style='float:left;'>Please </div>";
+			
+			if (!empty($vcita_widget['confirmation_token'])) {
+				$message .= "<div style='float: left;margin-left: 3px;'><b><a style='text-decoration:underline;' href='http://www.vcita.com/users/confirmation?confirmation_token=".$vcita_widget['confirmation_token']."&o=int.4' target='_blank'>Confirm your account</a></b> or </div>";
+			}
+			
+			$message .= "<div style='float: left;margin-left: 3px;'>follow instructions in the email to complete vCita configuration.</div></div>";
         }
 
     } elseif (!empty($vcita_widget['last_error'])) {

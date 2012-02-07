@@ -150,6 +150,12 @@ vCita also provides alternative smaller widgets that can fit anywhere in your we
 
 
 == Changelog == 
+ = Version 1.4.6.2 =
+ * Optimized confirm your account link
+ 
+ = Version 1.4.6.1 =
+ * Check for expert availability of upgrade 
+ 
  = Version 1.4.6 =
  * Image fixes
  
