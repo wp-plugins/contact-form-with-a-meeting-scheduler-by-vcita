@@ -150,6 +150,9 @@ vCita also provides alternative smaller widgets that can fit anywhere in your we
 
 
 == Changelog == 
+ = Version 1.4.6.3 (16 Feb 2012) =
+ * Break plugin to two files to support the new Meeting Scheduler plugin
+ 
  = Version 1.4.6.2 =
  * Optimized confirm your account link
  
