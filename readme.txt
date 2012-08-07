@@ -1,4 +1,4 @@
-﻿=== Next Gen Contact Form by vCita ===
+﻿=== Contact Form by vCita ===
 Contributors: vCita.com
 Donate link: 
 Tags: contact, contact form, contact me, contact page, custom form,  vcita, web form
@@ -6,7 +6,7 @@ Requires at least: 2.8
 Tested up to: 3.3.2
 Stable tag: trunk
  
-vCita next generation contact form proves to increase the number of contact requests 
+Contact form by vCita proves to increase the number of contact form requests 
  
 == Description ==
 
@@ -164,6 +164,9 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy">Privacy Policy<
 
 
 == Changelog == 
+ = Version 2.1.0 (7 Aug 2012) = 
+  * Embed code is now dynamically created
+
  = Version 2.0.0 (13 May 2012) = 
  * Settings page now uses vCita site for much more customization options
  * Redesign of the settings page to be simplier and contain more relevant information

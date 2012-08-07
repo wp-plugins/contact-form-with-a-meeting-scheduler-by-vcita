@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Next Gen Contact Form by vCita
+Plugin Name: Contact Form by vCita
 Plugin URI: http://www.vcita.com
-Description: vCita next generation contact form proves to increase the number of contact requests 
-Version: 2.0.0
+Description: Contact form by vCita proves to increase the number of contact form requests 
+Version: 2.1.0
 Author: vCita.com
 Author URI: http://www.vcita.com
 */
@@ -11,12 +11,12 @@ Author URI: http://www.vcita.com
 /* --- Static initializer for Wordpress hooks --- */
 
 // Check if vCita plugin already installed.
-if (vcita_contact_check_plugin_available('vcita_scheduler') || vcita_contact_check_plugin_available('vcita_customer_support')) {
+if (vcita_contact_check_plugin_available('vcita_scheduler') || vcita_contact_check_plugin_available('vcita_support')) {
 	add_action('admin_notices', 'vcita_contact_other_plugin_installed_warning');
 } else {
 	define('VCITA_SERVER_BASE', "www.vcita.com"); /* Don't include the protocol, added dynamically */
-	define('VCITA_WIDGET_VERSION', '2.0.0');
-	define('VCITA_WIDGET_PLUGIN_NAME', 'Next Gen Contact Form by vCita');
+	define('VCITA_WIDGET_VERSION', '2.1.0');
+	define('VCITA_WIDGET_PLUGIN_NAME', 'Contact Form by vCita');
 	define('VCITA_WIDGET_KEY', 'vcita_widget');
 	define('VCITA_WIDGET_API_KEY', 'wp');
 	define('VCITA_WIDGET_MENU_NAME', 'vCita Contact Form');
@@ -41,7 +41,7 @@ if (vcita_contact_check_plugin_available('vcita_scheduler') || vcita_contact_che
  * Notify about other vCita plugin already available
  */ 
 function vcita_contact_other_plugin_installed_warning() {
-	echo "<div id='vcita-warning' class='error'><p><B>".__("vCita Plugin is already installed")."</B>".__(', please remove "<B>Next Gen Contact Form by vCita</B>" and use the available "<B>Meeting Scheduler by vCita</B>" plugin')."</p></div>";
+	echo "<div id='vcita-warning' class='error'><p><B>".__("vCita Plugin is already installed")."</B>".__(', please remove "<B>Contact Form by vCita</B>" and use the available "<B>Meeting Scheduler by vCita</B>" plugin')."</p></div>";
 }
 
 /**
