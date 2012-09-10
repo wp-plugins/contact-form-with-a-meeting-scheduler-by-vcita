@@ -70,7 +70,7 @@ For manual installation instructions and additional contact form widgets - look 
 
 == Frequently Asked Questions ==
 
-= which contact form options do I have? =
+= Which contact form options do I have? =
 vCita offers three contact form options to engage more visitors within your website:
 
 *  Active Engage (proactive contact form) - display "call-to-action" at the bottom of your web page.
@@ -184,7 +184,7 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
  * And many more contact form features!
 
 
-= which contact form settings are available? =
+= Which contact form settings are available? =
 
 * Change your contact form profile name, title and image
 * change your contact form welcome message
