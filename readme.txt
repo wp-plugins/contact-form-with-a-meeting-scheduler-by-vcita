@@ -131,19 +131,6 @@ Simply have multiple lines in the following format:<br>
 Now visitors can send a message or set a meeting with each of the users listed.<br>
 Each user will get an email to confirm his email address and upload an image to complete his profile.<br>
 
-<br>
-Visit the vCita product pages to learn more about the <a href="http://www.vcita.com/product?invite=WP">vCita Contact Form</a>
-For other FAQ about vCita web-service please refer to <a href="http://www.vcita.com/about/faq?invite=WP">vCita FAQ</a>
-<br>
-
-= What are vCita Terms and Conditions? =
-Please visit <a href="http://www.vcita.com/about/terms_of_service?invite=WP">Terms and Conditions</a>
-<br>
-
-= What is vCita Privacy Policy? =
-Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Privacy Policy</a>
-<br>
-
 = What features do I get from vCita Contact Form? =
 
  * Actively invite your website visitors to contact you with new, engaging contact form formats
@@ -187,19 +174,32 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 = Which contact form settings are available? =
 
 * Change your contact form profile name, title and image
-* change your contact form welcome message
+* Change your contact form welcome message
 * Select a contact form color theme, or define your own contact form theme
-* change the Proactive contact form label text
-* change the Proactive contact form and the sidebar contact form buttons and links texts
-* define your contact form automatic reply message
+* Change the Proactive contact form label text
+* Change the Proactive contact form and the sidebar contact form buttons and links texts
+* Define your contact form automatic reply message
 * Choose whether to offer meetings throgh you contact form
 * Define after how many seconds to auotomatically display the proactive contact form
-* change the size of the contact form
-* decide whether to ask for your clients phone number in your contact form
-* choose to which profile page your contact form should link to (vCita profile page, a custome page or don't show a full profile in your contact form at all)
-* Select a horizontal or a vertical contact form side bar.
+* Change the size of the contact form
+* Decide whether to ask for your clients phone number in your contact form
+* Choose to which profile page your contact form should link to (vCita profile page, a custome page or don't show a full profile in your contact form at all)
+* Select a horizontal or a vertical contact form side bar
 <br><br>
 and if you choose to offer meetings, you have much more options ... 
+<br>
+
+<br>
+Visit the vCita product pages to learn more about the <a href="http://www.vcita.com/product?invite=WP">vCita Contact Form</a>
+For other FAQ about vCita web-service please refer to <a href="http://www.vcita.com/about/faq?invite=WP">vCita FAQ</a>
+<br>
+
+= What are vCita Terms and Conditions? =
+Please visit <a href="http://www.vcita.com/about/terms_of_service?invite=WP">Terms and Conditions</a>
+<br>
+
+= What is vCita Privacy Policy? =
+Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Privacy Policy</a>
 <br>
 
 == Screenshots ==
