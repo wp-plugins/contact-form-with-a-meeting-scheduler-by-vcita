@@ -15,14 +15,14 @@ vCita Contact Form is a simple, free and easy-to-use contact form for your websi
 = Key contact form features: =
 *   Friendly and intuitive contact form
 *   Well-designed Contact Form with a professional look. 
-*   Choose your colors, fonts and text customization
+*   Choose your contact form colors, fonts and text customization
 *   Input validation for Contact form fields
-*   Customize your welcome message and thank you message 
+*   Customize your contact form welcome message and thank you message 
 *   Get full details of your contact form requests: URL, time, phone etc.
 *   Track contact form messages history, and know when leads read your response
 *   Never share your email address with visitors – even when you reply!
 *   Send contact form submissions to more than one email
-*   Have a Contact label that follows your website visitors on any page of your website and **double the number of contact requests.**
+*   Have a proactive Contact form label that follows your website visitors on any page of your website and **double the number of contact requests.**
 
 
 <BR>
@@ -40,7 +40,7 @@ vCita Contact Form is connected to the powerful vCita client engagement platform
 *   A single dashboard to manage all contacts , messages, meetings, payments etc.
 
 <BR>
-To learn more about the vCita platform visit <a href="http://www.vcita.com/product?invite=WP">vCita product pages</a>
+To learn more about the vCita platform and contact form visit <a href="http://www.vcita.com/product?invite=WP">vCita product pages</a>
 <BR>
 
 
@@ -56,7 +56,7 @@ To learn more <a href="http://www.vcita.com/?invite=WP">visit vCita</a>.
 == Installation ==
  
 
-= Recommended installation =
+= Recommended installation for vCita Contact Form =
 
 1.	Connect to WordPress Admin Panel
 2.	Click the "Plugins" menu on the left and choose "Add New".
@@ -70,24 +70,33 @@ For manual installation instructions and additional contact form widgets - look 
 
 == Frequently Asked Questions ==
 
+= which contact form options do I have? =
+vCita offers three contact form options to engage more visitors within your website:
+
+*  Active Engage (proactive contact form) - display "call-to-action" at the bottom of your web page.
+*  Contact Form - an alternative to your existing contact form, with an option to request a service or schedule a meeting on your contact page. 
+*  Contact Form Sidebar - add a sidebar to any post or page. Normally, this vertical sidebar, or horizontal header/footer, will have your photo/logo, and a brief invitation to contact you or schedule an appointment.
+<br>
+
 = How do I customize the photo and text in my contact form or widget? =
 Once you enter your email, you will receive an email from vCita to complete your registration. (or you can do it directly from the plugin settings)<br>
 You will then have the option to customize your contact form, add your photo, set meeting preferences and schedule.<br>
 Once you are logged in to vCita, you can always change your contact form settings from the Wordpress plugin settings page.<br>
 <br>
 
+
 = How do I choose between Contact Form and Contact Widget? = 
-You may choose between Contact Form that has an option for scheduling a meeting, and a Contact Form Widget that's a smaller version, with two buttons - "Send a message" and "Set a meeting".<br>
+In addition to the proactive contact form, you probably want to choose between Contact Form that has an option for scheduling a meeting, and a Contact Form on the side bar that's a smaller version, with two buttons - "Send a message" and "Set a meeting".<br>
 In the plugin settings page you'll be able to preview the two options.<br>
 <br>
-When adding vCita on the Widgets menu, you'll have the option to choose between the two. <br>
+When adding vCita on the Widgets menu, you'll have the option to choose between the two contact forms. <br>
 <br>
 When adding vCita Contact Form manually to specific pages you can use the following code  samples:<br>
 [vCitaContact type=widget]<br>
 [vCitaContact type=contact]<br>
 <br>
 
-= How do I change the size of the widget? =
+= How do I change the size of the contact form widget? =
 Use the following code sample:<br>
 To place widget horizontally - [vCitaContact type=widget height=200]<br>
 Width is adjusted to the width of the page or frame the widget is added to.<br>
@@ -107,7 +116,7 @@ Do not use the vCita widget.
 3. Upload the "vcita-contact-form" folder to your server in "/wp-content/plugins" directory.
 4. Back on the admin panel click the "Plugins" menu on the left. 
 5. You should see the vCita Contact Form plugin listed in the available plugins. Click the "Activate" link below the plugin name.
-6. Click "Next Gen Contact Form by vCita" under the "Plugins" menu.
+6. Click "Contact Form by vCita" under the "Plugins" menu.
 7. Enter your e-mail address, first and last name and click "Save Settings".
 8. Follow instructions sent to you by email from vCita.com to complete configuration.
 <br>
@@ -143,7 +152,7 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
  * Easy and intuitive customizable contact form
    * Customize your contact form look and feel  
    * Choose any specific contact form colors, font or text 
- * Choose your own welcome message
+ * Choose your own welcome message on the contact form
  * Offer visitors to schedule meetings directly from your Contact Form
    * Meet using our online video room or Skype
    * Meet using our phone conference service
@@ -164,27 +173,46 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
    * Secure payment prior to meeting
    * Collect payment for any service you provide
  * Manage all client interaction from a single advanced platform
-   * No need to expose your own email address
+   * No need to expose your own email address on the contact form
    * Work with a single point tool for all online visitors interactions
  * A dashboard to track your online traffic as well as latest contact form submissions
    * View your contact form traffic
    * View number of leads from contact form per-day
    * Manage latest contact form engagements
+   * Get full details of your contact form requests: URL, time, phone etc.
  * Track when clients open and read any of your messages
- * And many more features!
+ * And many more contact form features!
 
+
+= which contact form settings are available? =
+
+* Change your contact form profile name, title and image
+* change your contact form welcome message
+* Select a contact form color theme, or define your own contact form theme
+* change the Proactive contact form label text
+* change the Proactive contact form and the sidebar contact form buttons and links texts
+* define your contact form automatic reply message
+* Choose whether to offer meetings throgh you contact form
+* Define after how many seconds to auotomatically display the proactive contact form
+* change the size of the contact form
+* decide whether to ask for your clients phone number in your contact form
+* choose to which profile page your contact form should link to (vCita profile page, a custome page or don't show a full profile in your contact form at all)
+* Select a horizontal or a vertical contact form side bar.
+<br><br>
+and if you choose to offer meetings, you have much more options ... 
+<br>
 
 == Screenshots ==
 
 1. **Contact Form** - Allows any visitor to easily contact you or ask for a meeting
-1. **Active Contact Form** - Actively invite your site visitors
-1. **Active Contact Form** - floating mode after closed by the visitor
+1. **Proactive Contact Form** - Actively invite your site visitors
+1. **Proactive Contact Form** - floating mode after closed by the visitor
 1. **Management Platform** - Monitor traffic and manage your contacts, messages and meeting requests
 
 
 == Changelog == 
  = vCita Contact Form Version 2.0.0 (13 May 2012) = 
- * Settings page now uses vCita site for much more customization options
+ * Settings page now uses vCita site for much more customization options on your contact form
  * Redesign of the settings page to be simplier and contain more relevant information
  * Changed to use the new API 
  * Fixed all warnings for referencing undefined array indices 
