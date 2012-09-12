@@ -211,19 +211,19 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 
 
 == Changelog == 
- = vCita Contact Form Version 2.0.0 (13 May 2012) = 
- * Settings page now uses vCita site for much more customization options on your contact form
- * Redesign of the settings page to be simplier and contain more relevant information
- * Changed to use the new API 
- * Fixed all warnings for referencing undefined array indices 
- * Updated FAQs
- 
  
  = vCita Contact Form Version 2.1.1 =
  * FAQ enhancements
  
  = vCita Contact Form Version 2.1.0 =
  * Improved Active Engage look and feel
+ 
+ = vCita Contact Form Version 2.0.0 (13 May 2012) = 
+ * Settings page now uses vCita site for much more customization options on your contact form
+ * Redesign of the settings page to be simplier and contain more relevant information
+ * Changed to use the new API 
+ * Fixed all warnings for referencing undefined array indices 
+ * Updated FAQs
  
  = vCita Contact Form Version 1.4.6.2 =
  * Optimized confirm your account link
