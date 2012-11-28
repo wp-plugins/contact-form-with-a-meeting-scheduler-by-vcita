@@ -3,7 +3,7 @@
 Plugin Name: Contact Form by vCita
 Plugin URI: http://www.vcita.com
 Description: Contact form by vCita proves to increase the number of contact form requests 
-Version: 2.1.0
+Version: 2.1.2
 Author: vCita.com
 Author URI: http://www.vcita.com
 */
@@ -15,7 +15,7 @@ if (vcita_contact_check_plugin_available('vcita_scheduler') || vcita_contact_che
 	add_action('admin_notices', 'vcita_contact_other_plugin_installed_warning');
 } else {
 	define('VCITA_SERVER_BASE', "www.vcita.com"); /* Don't include the protocol, added dynamically */
-	define('VCITA_WIDGET_VERSION', '2.1.0');
+	define('VCITA_WIDGET_VERSION', '2.1.2');
 	define('VCITA_WIDGET_PLUGIN_NAME', 'Contact Form by vCita');
 	define('VCITA_WIDGET_KEY', 'vcita_widget');
 	define('VCITA_WIDGET_API_KEY', 'wp');
