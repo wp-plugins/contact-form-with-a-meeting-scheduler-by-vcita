@@ -23,6 +23,8 @@ Use our well-designed Contact Form plugin, and tailor it to your specific needs 
 *   **New!** Customize contact form style- Select your form shape and form colors so it would perfectly match your needs.
 *   **New!** Create text fields, numbers fields, textareas, and dropdown fields!
 *   **New!** Select your contact form required field.
+*   **New!** fully integrates with Facebook pages! add your contact form to your Facebook Page!
+*   **New!** Contact form fully supports Spanish.
 *   Clients simply fill the contact form - no registration required
 *   Input validation for Contact form fields
 *   Never publish you email address or share it with visitors – even when you reply!
@@ -34,22 +36,29 @@ Use our well-designed Contact Form plugin, and tailor it to your specific needs 
 *   Customize your contact form welcome message 
 *   Add a picture and a welcome note to your contact form  
 *   Add your name and title to your contact form
+*   customize your contact form colors and theme.
 *   **New!** Add watermarks to selected fields on your contact form.
+*   **New!** Set the order of your contact form fields.   
 *   Customize your contact from thank you message
 *   Preview your contact form before adding it to your website.
+*   Set your contact form layout - make contact form labels above the fields or in line with the contact form fields.
 *   Easy to use dashboard to create and design your contact form.
 *   Design and content changes to your contact form are simple, and no re-installation is required.
-*   Send contact form submissions to more than one email.
-*   Track contact form messages history, and know when leads read your response to their contact form
+*   Send contact form submissions to as many emails as you want.
+*   Track contact form messages history, and know when leads read your response to their contact form.
 *   Get filled contact forms directly to your email. 
 *   clients fill your contact form without leaving your website.
+*   **New!** clients  can fill your contact form directly from Facebook
 *   Send clients email notification when the contact form was sent to you.
 *   Select a horizontal contact form or a vertical contact form. 
 *   Link your contact form to your profile page (vCita profile page, a custome page or don't show a full profile in your contact form at all)
 *   Get stats of your contact form views
+*   Send your wed developer a request to add vCita contact form to your webite with a direct link to edit your contact form.
 *   All contact form submissions saved and displayed in admin panel as well as emailed to you
+*   Add your contact form a "Set A meeting" Buttons.
 *   Share your contact form on social networks, and invite potential clients to contact you.
-*   Use your contact form in several places, and track the forms performance in every website.
+*   Use your contact form in several websites, and track the forms performance in every website.
+
 
 <BR>
 
@@ -62,6 +71,8 @@ Have a proactive Contact form label that follows your website visitors on any pa
 *   Display an invitation to contact you when a visitor is browsing your website for over 30 seconds (or any amount of time you choose).
 *   Change the Proactive contact form label text
 *   Customize the Proactive contact form buttons and links texts
+*   Add a picture to your proactive contact form
+*   Set your own welcoming title to the proactive contact form.
 *   Customize proactive contact form open and re-open time.
 *   Offer clients to schedule appointments and meetings through your contact form
 
@@ -70,6 +81,13 @@ Have a proactive Contact form label that follows your website visitors on any pa
 Add vCita contact form to your website now **for FREE**!
 <BR><br>
 visit the <a href ="http://www.vcita.com/contact-form?invite=WP">vCita Contact Form</a> page to learn more.
+
+= Web Professional? = 
+
+Are you a web professional or a marketing consultant helping small businesses grow their business online? vCita has a great offering for you and your clients!<BR>
+
+<a href="http://www.vcita.com/partners/web-professionals?invite=WP">Join vCita Web Professionals Program!</a>
+
 
 = Additional capabilities - the vCita platform =
 vCita Contact Form is connected to the powerful vCita client engagement platform:
@@ -88,14 +106,12 @@ To learn more about the vCita platform and contact form visit <a href="http://ww
 <a href="http://downloads.wordpress.org/plugin/contact-form-with-a-meeting-scheduler-by-vcita.zip">Download vCita Contact Form Wordpress plugin </a>
 
 
- 
-= Web Designer or Web Programmer? = 
-Are you a web designer, a web developer, a marketing consultant, have many followers or simply know other people who can benefit from vCita? <BR>
-vCita has an **affiliate program** for you. Visit <a href="http://www.vcita.com/about/affiliates?invite=wp">vCita affiliate page</a>
-
-To learn more acout vCita contact form, scheduler and other features <a href="http://www.vcita.com/?invite=WP">visit vCita</a>.
+To learn more about vCita contact form, scheduler and other features <a href="http://www.vcita.com/?invite=WP">visit vCita</a>.
 
 Keywords: form, contact froms, contacts form, captcha, custom forms, Formatting, multilingual, plugin, antispam, anti-spam, widget, custom, wordpress contact, wordpress contact form, contact from, text, contakt, contakt form, request, feedback form, feedback, contact button, contact form plugin, contacts form plugin, custom forms, captcha form, contact fields, form mailers, contact manager, contact form manager, wordpress contact, contact us form, contactme, contact form builder, feedback form, feedback forms
+
+
+
 
 == Installation ==
  
@@ -242,10 +258,13 @@ Each user will get an email to confirm his email address and upload an image to 
  * Get contact form notifications to your inbox
    * Contact form notification for each meeting request
    * Contact form notification for each contact request
+   * Set additional email that will get your Contact form notifications
+   * Clients get notification that their contact form was sent to you.
    * Email reminders prior to meetings schedule for you and your clients
  * Collect payments and bill for your time and services
    * Secure payment prior to meeting
    * Collect payment for any service you provide
+   * Set services price without collecting fee with vCita 
  * Manage all client interaction from a single advanced platform
    * No need to expose your own email address on the contact form
    * Work with a single point tool for all online visitors interactions
@@ -255,6 +274,8 @@ Each user will get an email to confirm his email address and upload an image to 
    * Manage latest contact form engagements
    * Get full details of your contact form requests: URL, time, phone etc.
  * Track when clients open and read any of your messages
+ * Use vCita contact form in any language
+ * get more social and let clients fill your contact form directly from your facebook page
  * And many more contact form features!
 
 
@@ -299,7 +320,14 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 
 == Changelog == 
  
- = vCita Contact Form Version 2.1.2 =
+= vCita Contact Form Version 2.1.3 = 
+ * Contact form fully integrats with facebook pages
+ * More payments options 
+ * Removed 24 hours scheduling notification
+ * Full Spanish support
+ * FAQ and tips enhancements
+
+= vCita Contact Form Version 2.1.2 =
  * Customized contact form fields and labels
  * Add as many form fields as desired
  * Created contact form labels in any language! 
