@@ -15,19 +15,23 @@ if (vcita_contact_check_plugin_available('vcita_scheduler') || vcita_contact_che
 	add_action('admin_notices', 'vcita_contact_other_plugin_installed_warning');
 } else {
 	define('VCITA_SERVER_BASE', "www.vcita.com"); /* Don't include the protocol, added dynamically */
-	define('VCITA_WIDGET_VERSION', '2.1.3');
+	define('VCITA_WIDGET_VERSION', '3.0');
 	define('VCITA_WIDGET_PLUGIN_NAME', 'Contact Form by vCita');
 	define('VCITA_WIDGET_KEY', 'vcita_widget');
 	define('VCITA_WIDGET_API_KEY', 'wp');
-	define('VCITA_WIDGET_MENU_NAME', 'vCita Contact Form');
+	define('VCITA_WIDGET_MENU_NAME', 'vCita Contact');
 	define('VCITA_WIDGET_SHORTCODE', 'vCitaContact');
 	define('VCITA_WIDGET_UNIQUE_ID', 'contact-form-with-a-meeting-scheduler-by-vcita');
 	define('VCITA_WIDGET_UNIQUE_LOCATION', __FILE__);
 	define('VCITA_WIDGET_CONTACT_FORM_WIDGET', 'true');
 	define('VCITA_WIDGET_SHOW_EMAIL_PRIVACY', 'true');
-
-	require_once(WP_PLUGIN_DIR."/".VCITA_WIDGET_UNIQUE_ID."/vcita-functions.php");
-	
+	define('VCITA_WIDGET_INVITE_CODE', 'WP');
+	define('VCITA_LOGIN_PATH', VCITA_SERVER_BASE."/integrations/wordpress/new");
+	define('VCITA_WIDGET_DEMO_UID', 'wordpress.demo'); 	/*	vCita.com/meet2know.com demo user uid: wordpress.demo */
+	require_once(WP_PLUGIN_DIR."/".VCITA_WIDGET_UNIQUE_ID."/vcita-utility-functions.php");
+	require_once(WP_PLUGIN_DIR."/".VCITA_WIDGET_UNIQUE_ID."/vcita-widgets-functions.php");
+	require_once(WP_PLUGIN_DIR."/".VCITA_WIDGET_UNIQUE_ID."/vcita-settings-functions.php");
+	require_once(WP_PLUGIN_DIR."/".VCITA_WIDGET_UNIQUE_ID."/vcita-ajax-function.php");
 	
 	/* --- Static initializer for Wordpress hooks --- */
 
@@ -35,6 +39,8 @@ if (vcita_contact_check_plugin_available('vcita_scheduler') || vcita_contact_che
 	add_shortcode(VCITA_WIDGET_SHORTCODE,'vcita_add_contact');
 	add_action('admin_menu', 'vcita_admin_actions');
 	add_action('wp_head', 'vcita_add_active_engage');
+ 	// AJAX preperation
+	wp_localize_script( 'vcita_ajax_request', 'vcitaAjax', array( 'ajaxurl' => admin_url( 'vcita-ajax.php' ) ) );
 }
 
 /** 

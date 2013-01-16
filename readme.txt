@@ -319,7 +319,12 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 
 
 == Changelog == 
- 
+= vCita Contact Form Version 3.0 = 
+ * A new plugin management screen
+ * All widgets editing can now be done directly from Wordpress
+ * Fix to Contact Sidebar disconnecion issue
+ * New color themes options 
+
 = vCita Contact Form Version 2.1.3 = 
  * Contact form fully integrats with facebook pages
  * More payments options 
