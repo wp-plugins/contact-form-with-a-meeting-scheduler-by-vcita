@@ -477,5 +477,4 @@ function generate_or_validate_user($widget_params) {
                         "&ref=".VCITA_WIDGET_API_KEY.""));
 						
 	return vcita_parse_expert_data_from_api($success, $widget_params, $raw_data);
-}cess, $widget_params, $raw_data);
 }
