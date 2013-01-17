@@ -37,13 +37,10 @@ function vcita_uninstall() {
 function vcita_initialize_data() {
 	$vcita_widget = (array) get_option(VCITA_WIDGET_KEY);
 	
-	if (empty($vcita_widget)) {
-		update_option(VCITA_WIDGET_KEY.'init', true);
-	}
 	// Save if this is a new installation or not.
 	if (empty($vcita_widget) || (!isset($vcita_widget['uid']) && !isset($vcita_widget['version']))) {
 		$vcita_widget = array ('new_install' => 'true');
-
+		update_option(VCITA_WIDGET_KEY.'init', true);
 	} else if ($vcita_widget['new_install'] != 'true')  {
 		$vcita_widget['new_install'] = 'false';
 	}
