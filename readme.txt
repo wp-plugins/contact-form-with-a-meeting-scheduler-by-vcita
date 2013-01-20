@@ -3,7 +3,7 @@ Contributors: vCita.com
 Donate link: 
 Tags: contact, contact form, contact me, contact page, custom form, vcita, web form, contact us, contacts, customized form
 Requires at least: 2.8
-Tested up to: 3.4.2
+Tested up to: 3.5
 Stable tag: trunk
  
 Contact form by vCita proves to increase the number of contact form requests 
