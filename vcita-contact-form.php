@@ -3,7 +3,7 @@
 Plugin Name: Contact Form by vCita
 Plugin URI: http://www.vcita.com
 Description: Contact form by vCita proves to increase the number of contact form requests 
-Version: 3.0.1
+Version: 3.1.0
 Author: vCita.com
 Author URI: http://www.vcita.com
 */
@@ -15,7 +15,7 @@ if (vcita_contact_check_plugin_available('vcita_scheduler') || vcita_contact_che
 	add_action('admin_notices', 'vcita_contact_other_plugin_installed_warning');
 } else {
 	define('VCITA_SERVER_BASE', "www.vcita.com"); /* Don't include the protocol, added dynamically */
-	define('VCITA_WIDGET_VERSION', '3.0.1');
+	define('VCITA_WIDGET_VERSION', '3.1.0');
 	define('VCITA_WIDGET_PLUGIN_NAME', 'Contact Form by vCita');
 	define('VCITA_WIDGET_KEY', 'vcita_widget');
 	define('VCITA_WIDGET_API_KEY', 'wp');
@@ -27,6 +27,7 @@ if (vcita_contact_check_plugin_available('vcita_scheduler') || vcita_contact_che
 	define('VCITA_WIDGET_SHOW_EMAIL_PRIVACY', 'true');
 	define('VCITA_WIDGET_INVITE_CODE', 'WP');
 	define('VCITA_LOGIN_PATH', VCITA_SERVER_BASE."/integrations/wordpress/new");
+	define('VCITA_CHANGE_EMAIL_PATH', VCITA_SERVER_BASE."/integrations/wordpress/change_email");
 	define('VCITA_WIDGET_DEMO_UID', 'wordpress.demo'); 	/*	vCita.com/meet2know.com demo user uid: wordpress.demo */
 	require_once(WP_PLUGIN_DIR."/".VCITA_WIDGET_UNIQUE_ID."/vcita-utility-functions.php");
 	require_once(WP_PLUGIN_DIR."/".VCITA_WIDGET_UNIQUE_ID."/vcita-widgets-functions.php");

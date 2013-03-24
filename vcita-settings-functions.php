@@ -146,6 +146,8 @@ function vcita_admin_actions() {
 
 						contentHolder.css({ 'margin-top' : marginTop });
 				    	$('#floating').addClass('visible');
+				    	$('#floating-holder').css({'opacity':1});
+				    	$('#content-holder').css({'display':'block'});
 				    }
 		        };
 		        
@@ -153,6 +155,8 @@ function vcita_admin_actions() {
 		        	$('#content').html(" ");  
 				    	
 			        $('#floating').removeClass('visible');
+			        $('#floating-holder').css({'opacity':0});
+			        $('#content-holder').css({'display':'none'});
 		        };		         
 
 		        $('#start-login')
@@ -166,13 +170,20 @@ function vcita_admin_actions() {
 			        	var new_location = "http://" + "<?php echo VCITA_LOGIN_PATH.'?callback=' ?>" + encodeURIComponent(callbackURL) + "&invite="+"<?php echo VCITA_WIDGET_INVITE_CODE ?>"+"&lang="+"<?php echo get_locale() ?>"+"&email=" + email; 
 			        	window.location = new_location;
 		        	});
-					
-		        $('#switch-account')
+				
+				$('#switch-email')
+		        	.click(function(){
+	        			var callbackURL = "<?php echo $url = get_admin_url('', '', 'admin') . 'admin.php?page='.VCITA_WIDGET_UNIQUE_ID.'/vcita-callback.php' ?>";
+			        	var new_location = "http://" + "<?php echo VCITA_CHANGE_EMAIL_PATH.'?callback=' ?>" + encodeURIComponent(callbackURL) + "&invite="+"<?php echo VCITA_WIDGET_INVITE_CODE ?>"+"&lang="+"<?php echo get_locale() ?>"; 
+			        	window.location = new_location;
+	 	        	});				
+				
+				$('#switch-account')
 		        	.click(function(){
 			        	var callbackURL = "<?php echo $url = get_admin_url('', '', 'admin') . 'admin.php?page='.VCITA_WIDGET_UNIQUE_ID.'/vcita-callback.php' ?>";
 			        	var new_location = "http://" + "<?php echo VCITA_LOGIN_PATH.'?callback=' ?>" + encodeURIComponent(callbackURL) + "&invite="+"<?php echo VCITA_WIDGET_INVITE_CODE ?>"+"&lang="+"<?php echo get_locale() ?>"; 
 			        	window.location = new_location;
-	 	        	});					
+	 	        	});				
 				
 				$('#vcita-email')
 					.keypress(function(e){
@@ -220,7 +231,12 @@ function vcita_admin_actions() {
 					 	showContent($('#vcita-video').html());    
 					 	return false;
 				 	});
-					 	
+
+				$('#play-vcita-video2')
+				 	.click(function(){
+					 	showContent($('#vcita-video2').html());    
+					 	return false;
+				 	});						 	
 				 	
 			<?php 
 				if (vcita_is_demo_user()) { ?>
@@ -244,7 +260,8 @@ function vcita_admin_actions() {
 		<div class="vcita-wrap" dir="ltr">
 			<div id="vcita-head">
 	    		Welcome to vCita’s Contact Experience
-	    		<div class="small-text">Gain More Clients from Your Website!</div>
+	    		<br>
+	    		<a href="javascript:void(0);" class="watch-video" id="play-vcita-video2">Watch Video</a>
 	    	</div>
 			<?php echo vcita_create_user_message($vcita_widget, $update_made); ?>
 			<?php if ($vcita_dismissed) { ?>
@@ -260,7 +277,7 @@ function vcita_admin_actions() {
 	    		<h3>Contact requests will be sent to this email:</h3>
 	    		<label class="checked" for="user-email"></label>
 	    		<input id="vcita-email" type="text" disabled="disabled" value="<?php echo($vcita_widget["email"]) ?>"/>
-	    		<a href="javascript:void(0)" class="gray-button-style account" id="switch-account" ><span></span>Change Email</a>
+	    		<a href="javascript:void(0)" class="gray-button-style account" id="switch-email" ><span></span>Profile Settings</a>
 	    	<?php } ?>
 	    	</div>
 	    	<div class="section widgets-holder">
@@ -378,6 +395,7 @@ function vcita_admin_actions() {
 	    	</div>
 	    	<div class="links-holder left">
 		    	<a class="with-icon scheduling" target="_blank" href="http://<?php echo VCITA_SERVER_BASE ?>/settings?section=services&invite=<?php echo VCITA_WIDGET_INVITE_CODE ?>&confirmation_token=<?php echo $vcita_widget['confirmation_token'] ?>">Scheduling Options</a>
+		    	<a id="switch-account" target="_blank" href="javascript:void(0);">Switch to a different vCita account</a>
 	    	</div>
 	    	<div class="shortcode-holder right">
 	    		To change widgets size: <a class="shortcode gray-button-style edit"><span></span>Grab Shortcodes</a>
@@ -398,9 +416,11 @@ function vcita_admin_actions() {
 	    </div>
 	    
 	    <div id="floating">
-	    	<div id="content-holder">
-	    		<a id="close-floating"></a>
-		    	<div id="content">
+	    	<div id="floating-holder">
+		    	<div id="content-holder">
+		    		<a id="close-floating"></a>
+			    	<div id="content">
+			    	</div>
 		    	</div>
 	    	</div>
 	    </div>
@@ -430,6 +450,10 @@ function vcita_admin_actions() {
 			<iframe allowfullscreen="true" type="text/html" frameborder="0" height="363" src="http://www.youtube.com/embed/rv-O7gxwLbk" width="600" />
 		</script>
 		
+		<script type="text/html" id="vcita-video2">
+			<iframe allowfullscreen="true" type="text/html" frameborder="0" height="363" src="http://www.youtube.com/embed/d4HCpbz8FKo" width="600" />
+		</script>
+
 		<script type="text/html" id="settings-iframe">
 			<iframe src="http://<?php echo VCITA_SERVER_BASE ?>/integrations/wordpress/settings" class="hidden" width="0" height="0"/>
 		</script>
