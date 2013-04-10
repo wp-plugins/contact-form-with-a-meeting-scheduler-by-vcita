@@ -1,22 +1,27 @@
 === Contact Form by vCita ===
 Contributors: vCita.com
 Donate link: 
-Tags: contact, contact form, contact me, contact page, custom form, vcita, web form, contact us, contacts, customized form, free contact form, HTML fomrs, HTML contact form
+Tags: contact, contact form, contact me, contact page, custom form, vcita, web form, contact us, contacts, contact us form, customized form, free contact form, HTML fomrs, HTML contact form, form, form builder, form maker, contact form manager
 Requires at least: 2.8
 Tested up to: 3.5.1
 Stable tag: trunk
  
-Contact form by vCita proves to increase the number of contact form requests 
- 
+Contact form by vCita is designed to generate more leads from your website. 
 == Description ==
 
-vCita Contact Form is a simple, **free** and **easy-to-use** WordPress contact form plugin.  
-Use our well-designed Contact Form plugin, and tailor it to your specific needs and style. 
-<BR>Customize almost every aspect of your contact form, no HTML knowledge required. 
-<BR>
+vCita's contact form wordpress plugin is designed to generate more leads from your website. <BR>
+It uniquely combines a simple setup for any website, with customization according to any color scheme and branding, in addition to online scheduling and management of all client interactions.
+
+
 
 http://www.youtube.com/watch?v=d4HCpbz8FKo
 <BR>
+
+vCita Contact Form is a simple, **free** and **easy-to-use** WordPress contact form plugin.  
+Use our well-designed Contact Form plugin, and tailor it to your specific needs and style. 
+<BR>Ask any question you'd like and customize almost every aspect of your contact form, no HTML knowledge required. 
+<BR>
+
 
 = Contact Form Key features: =
 *   Friendly and intuitive contact form
@@ -27,6 +32,7 @@ http://www.youtube.com/watch?v=d4HCpbz8FKo
 *   **New!** More colors, borders and backgrounds options for the Contact Form
 *   **New!** New customization options also for the proactive contact form and sidebar widgets
 *   Create your contact form labels in any language! 
+*   Add an unlimited number of fields, including different types of text input fields.
 *   Customize contact form style- Select your form shape and form colors so it would perfectly match your needs.
 *   Create text fields, numbers fields, textareas, and dropdown fields!
 *   Select your contact form required field.
@@ -55,6 +61,8 @@ http://www.youtube.com/watch?v=d4HCpbz8FKo
 *   Track contact form messages history, and know when leads read your response to their contact form.
 *   Get filled contact forms directly to your email. 
 *   clients fill your contact form without leaving your website.
+*   Edit your contact form labels font and color
+*   The contact form background can be transparent, so your website background will show. 
 *   clients  can fill your contact form directly from Facebook
 *   Send clients email notification when the contact form was sent to you.
 *   Select a horizontal contact form or a vertical contact form. 
@@ -87,7 +95,7 @@ Have a proactive Contact form label that follows your website visitors on any pa
 <BR>
 Add vCita contact form to your website now **for FREE**!
 <BR><br>
-visit the <a href ="http://www.vcita.com/contact-form?invite=WP">vCita Contact Form</a> page to learn more.
+visit the <a href ="http://www.vcita.com/contact_form?invite=WP">vCita Contact Form</a> page to learn more.
 
 = Web Professional? = 
 
@@ -128,10 +136,36 @@ Keywords: form, contact froms, contacts form, captcha, custom forms, Formatting,
 1.	Connect to WordPress Admin Panel
 2.	Click the "Plugins" menu on the left and choose "Add New".
     Search for “Contact Form by vCita” and install it. 
-3.	After installation has finished, click "Activate".
-4.	Click the "Plugins" menu on the left and choose "vCita Contact Form".
-5.	Enter your e-mail address, first and last name and click "Save Settings".
-6.	Follow instructions sent to you by email from vCita.com to complete configuration.
+3.	After the contact form plugin installation has finished, click "Activate".
+4.      Click on the new "vCita Contact Form" tab that is now available on your left bar.
+5.      Insert your email to which new contact requests and contact form submissions will be sent, and click "OK"
+6.      Insert your first name and last name in the pop-up window and click "Submit" to continue to editing you contact form
+
+= customize your contact form =
+1.	Make sure the "Contact Form" option is switched on.
+2.      Click on "Edit" to start customizing your contact form
+3.      Set your contact form layout:	
+4.      Select your preffered contact form layout, out of the 4  recommanded contact form layouts.
+5.      decide where to place your contact form fields' labels: you can place them above the text area, to the left of the text area or inside the text area.
+6.      Add or edit title text which will appear on the upper side of your contact form
+7.      Under "Form Fields" - edit and add new fields to your contact form. To add new fields, select the field type and click add. You can choose which fields are mandatory.
+8.      Edit your contact form "Colors & Fonts" - You can select one of vCita's recommended themes, or create your own theme. You could use the new theme you create for other contact form widgets you'll use.
+9.      You can preview all changes on the right.
+10.     Once doen, click "Done".
+11.     The contact form will be added to your website as a Contact page.
+
+= Add the contact form to an existing page = 
+1.      The contact form is automatically added to a new "Contact us" page.
+2.      To add the contact form to an existing page, click on "Grab Shortcodes" on the main contact form plugin page.
+3.      Copy the contact form Shortcode.
+4.      Past the contact form shortcode in the desired page.
+
+= Add scheduling options to your contact form =
+1.      With vCita contact form, you can offer your clients to book time with you- online, right from your contact form
+2.      To set your online scheduling preferences - click on the "Scheduling Options" link on the Contact Form plugin main page.
+3.      Set your offered services on the new window.
+4.      Select contact form layout which includes scheduling buttons.
+
 
 For manual installation instructions and additional contact form widgets - visit the FAQ section
 
@@ -310,7 +344,7 @@ and if you choose to offer meetings, you have much more options ...
 
 <br>
 Visit the vCita product pages to learn more about the <a href="http://www.vcita.com/product?invite=WP">vCita Contact Form</a><br>
-Have more questions? Need assistance? <a href="http://support.vcita.com/home">Visit our FAQ and Support forum</a>
+Have more questions? Need assistance? <a href="http://support.vcita.com/home">Visit vCita FAQ and Support forum</a>
 <br>
 
 = What are vCita Terms and Conditions? =
@@ -323,9 +357,9 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 
 == Screenshots ==
 
+1. **vCita Contact Form** - Fully customized form, with several layout options and full customization.
 1. **Customize colors and fonts** - Customize your contact form's colors, border styles, fonts and sizes.
 1. **Custom Fields** - Add, Edit and Remove fields with a simple drag and drop UI. 
-1. **vCita Contact Form** - Fully customized form, with several layout options and full customization.
 1. **Proactive Contact Form** - Don't wait for visitors to contact you, approach them on any page and double your leads!
 1. **Track and Manage contacts** - Keep history of contacts, manage contact details and track whether your messages are read by clients. 
 
@@ -333,20 +367,20 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 == Changelog == 
 = vCita Contact Form Version 3.1 = 
  * A direct link to profile settings
- * New customization options: Fonts, font sizes, text box colors, new layouts, and more.
+ * New contact form customization options: Fonts, font sizes, text box colors, new layouts, and more.
 
 = vCita Contact Form Version 3.0 = 
  * A new plugin management screen
  * All widgets editing can now be done directly from Wordpress
  * Fix to Contact Sidebar disconnecion issue
- * New color themes options 
+ * New contact form color themes options 
 
 = vCita Contact Form Version 2.1.3 = 
  * Contact form fully integrats with facebook pages
  * More payments options 
  * Removed 24 hours scheduling notification
  * Full Spanish support
- * FAQ and tips enhancements
+ * Contact form FAQ and tips enhancements
 
 = vCita Contact Form Version 2.1.2 =
  * Customized contact form fields and labels
