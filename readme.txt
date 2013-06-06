@@ -1,129 +1,50 @@
-=== Contact Form by vCita ===
-Contributors: vCita.com
-Donate link: 
-Tags: contact, contact form, contact me, contact page, custom form, vcita, web form, contact us, contacts, contact us form, customized form, free contact form, HTML fomrs, HTML contact form, form, form builder, form maker, contact form manager
+=== Contact Form Plugin for Wordpress  ===
+Contributors: vCita
+Donate link: http://www.vcita.com?invite=WP
+Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, forms plugin, contact button, feedback form, vCita
 Requires at least: 2.8
 Tested up to: 3.5.1
 Stable tag: trunk
  
-Contact form by vCita is designed to generate more leads from your website. 
+Contact form Plugin for Wordpress websites that will take your lead generation to new levels  
 == Description ==
 
-vCita's contact form wordpress plugin is designed to generate more leads from your website. <BR>
-It uniquely combines a simple setup for any website, with customization according to any color scheme and branding, in addition to online scheduling and management of all client interactions.
+Contact form builder that is uniquely designed for Wordpress
 
+
+= Build the contact form you need: =
+* **Simple Contact Form**– choose a template and customize fields, colors, fonts and layout – no coding is required for our contact form.
+* **Dynamic Contact Form** – plugs at the bottom of every page on your site, and displays a contact button or a lightbox to generate more leads
+* Sidebar contact widget – sidebar plugin for any page 
+
+
+= Free Contact Form Builder features: = 
+* Language customization for all texts and labels in the contact form. 
+* Text fields, numeric fields, text areas, and dropdown fields
+* Full customization of the contact form look and feel – layout, colors, size and more
+* Add your contact form to multiple Wordpress websites
+
+
+= Contact Form plugin connects your Wordpress site with vCita providing more than just a web form: = 
+* Email & SMS notifications to multiple recipients on any contact form submission
+* Auto-response
+* Lead and contact management 
+* Clients tracking and archive
+* Admin control panel with contact form submission analytics 
+* Integrated online scheduling & appointment booking 
+* Integrated online payments and invoicing 
+* Integrated email marketing 
+<BR><BR>
+Learn more about our <a href ="http://www.vcita.com/contact_form?invite=WP">Contact Form</a>
 
 
 http://www.youtube.com/watch?v=d4HCpbz8FKo
 <BR>
 
-vCita Contact Form is a simple, **free** and **easy-to-use** WordPress contact form plugin.  
-Use our well-designed Contact Form plugin, and tailor it to your specific needs and style. 
-<BR>Ask any question you'd like and customize almost every aspect of your contact form, no HTML knowledge required. 
-<BR>
+= Building Wordpress sites for others? = 
 
-
-= Contact Form Key features: =
-*   Friendly and intuitive contact form
-*   Well designed and professional looking contact form 
-*   fully flexible contact form
-*   Customize contact form fields. Create your own contact form fields to completely match your needs. Add as many contact form fields as you need!
-*   **New!** Customize the contact form fonts and fonts sizes
-*   **New!** More colors, borders and backgrounds options for the Contact Form
-*   **New!** New customization options also for the proactive contact form and sidebar widgets
-*   Create your contact form labels in any language! 
-*   Add an unlimited number of fields, including different types of text input fields.
-*   Customize contact form style- Select your form shape and form colors so it would perfectly match your needs.
-*   Create text fields, numbers fields, textareas, and dropdown fields!
-*   Select your contact form required field.
-*   Fully integrates with Facebook pages! add your contact form to your Facebook Page!
-*   Contact form fully supports Spanish.
-*   Clients simply fill the contact form - no registration required
-*   Input validation for Contact form fields
-*   Never publish you email address or share it with visitors – even when you reply!
-*   Manage your contact form leads and follow-up with your clients.
-
-<BR>
-
-= Additional contact form capabilities: =
-*   Customize your contact form welcome message 
-*   Add a picture and a welcome note to your contact form  
-*   Add your name and title to your contact form
-*   customize your contact form colors and theme.
-*   Add watermarks to selected fields on your contact form.
-*   Set the order of your contact form fields.   
-*   Customize your contact from thank you message
-*   Preview your contact form before adding it to your website.
-*   Set your contact form layout - make contact form labels above the fields or in line with the contact form fields.
-*   Easy to use dashboard to create and design your contact form.
-*   Design and content changes to your contact form are simple, and no re-installation is required.
-*   Send contact form submissions to as many emails as you want.
-*   Track contact form messages history, and know when leads read your response to their contact form.
-*   Get filled contact forms directly to your email. 
-*   clients fill your contact form without leaving your website.
-*   Edit your contact form labels font and color
-*   The contact form background can be transparent, so your website background will show. 
-*   clients  can fill your contact form directly from Facebook
-*   Send clients email notification when the contact form was sent to you.
-*   Select a horizontal contact form or a vertical contact form. 
-*   Link your contact form to your profile page (vCita profile page, a custome page or don't show a full profile in your contact form at all)
-*   Get stats of your contact form views
-*   Send your wed developer a request to add vCita contact form to your webite with a direct link to edit your contact form.
-*   All contact form submissions saved and displayed in admin panel as well as emailed to you
-*   Add your contact form a "Set A meeting" Buttons.
-*   Share your contact form on social networks, and invite potential clients to contact you.
-*   Use your contact form in several websites, and track the forms performance in every website.
-
-
-<BR>
-
-= Advanced contact form solution: =
-Get more leads out of your website by actively approaching website visitors with an invitation to contact you.<BR>
-Have a proactive Contact form label that follows your website visitors on any page of your website and **double** the number of contact requests.
-
-*   Make contacting much easier using vCita Proactive Contact Form
-*   Add Colored "Contact" Label at the bottom of your website, or on specific pages, which opens to a welcoming contact form.
-*   Display an invitation to contact you when a visitor is browsing your website for over 30 seconds (or any amount of time you choose).
-*   Change the Proactive contact form label text
-*   Customize the Proactive contact form buttons and links texts
-*   Add a picture to your proactive contact form
-*   Set your own welcoming title to the proactive contact form.
-*   Customize proactive contact form open and re-open time.
-*   Offer clients to schedule appointments and meetings through your contact form
-
-
-<BR>
-Add vCita contact form to your website now **for FREE**!
-<BR><br>
-visit the <a href ="http://www.vcita.com/contact_form?invite=WP">vCita Contact Form</a> page to learn more.
-
-= Web Professional? = 
-
-Are you a web professional or a marketing consultant helping small businesses grow their business online? vCita has a great offering for you and your clients!<BR>
-
-<a href="http://www.vcita.com/partners/web-professionals?o=WP">Join vCita Web Professionals Program!</a>
-
-
-= Additional capabilities - the vCita platform =
-vCita Contact Form is connected to the powerful vCita client engagement platform:
-
-*   Online appointment scheduler, synchronized with your calendar and shows your availability online and let visitors schedule time with you, directly from your contact form, or other widgets
-*   Offer a phone call, video or in-person meeting within your contact form 
-*   Collect payments for meetings or services 
-*   Send email campaigns to retain your clients and create new opportunities 
-*   A single dashboard to manage all contacts , messages, meetings, payments etc.
-
-<BR>
-To learn more about the vCita platform and contact form visit <a href="http://www.vcita.com/product?invite=WP">vCita product pages</a>
-<BR>
-
-
-<a href="http://downloads.wordpress.org/plugin/contact-form-with-a-meeting-scheduler-by-vcita.zip">Download vCita Contact Form Wordpress plugin </a>
-
-
-To learn more about vCita contact form, scheduler and other features <a href="http://www.vcita.com/?invite=WP">visit vCita</a>.
-
-Keywords: form, contact froms, contacts form, captcha, custom forms, Formatting, multilingual, plugin, antispam, anti-spam, widget, custom, wordpress contact, wordpress contact form, contact from, text, contakt, contakt form, request, feedback form, feedback, contact button, contact form plugin, contacts form plugin, custom forms, captcha form, contact fields, form mailers, contact manager, contact form manager, wordpress contact, contact us form, contactme, contact form builder, feedback form, feedback forms
+Use one of our free contact form plugins for any website you help with. <BR>
+Special admin control panel is designed to make Wordpress plugin integration and management easy. <BR>
 
 
 
@@ -131,34 +52,44 @@ Keywords: form, contact froms, contacts form, captcha, custom forms, Formatting,
 == Installation ==
  
 
-= Recommended installation for vCita Contact Form =
+= Contact Form Plugin Installation for Wordpress =
 
 1.	Connect to WordPress Admin Panel
 2.	Click the "Plugins" menu on the left and choose "Add New".
     Search for “Contact Form by vCita” and install it. 
-3.	After the contact form plugin installation has finished, click "Activate".
+3.	After the contact form plugin installation has completed, click "Activate".
 4.      Click on the new "vCita Contact Form" tab that is now available on your left bar.
-5.      Insert your email to which new contact requests and contact form submissions will be sent, and click "OK"
-6.      Insert your first name and last name in the pop-up window and click "Submit" to continue to editing you contact form
+5.      Enter an email to which new contact requests and contact form submissions will be sent, and click "OK"
+6.      Enter your first name and last name in the pop-up window and click "Submit" and start building your contact form.
+7.      Our contact form plugin offers you 3 different widgets. You can add any of the widgets to your wordpress website. For best results – we recommend to add all 3 widgets.
 
-= customize your contact form =
-1.	Make sure the "Contact Form" option is switched on.
-2.      Click on "Edit" to start customizing your contact form
-3.      Set your contact form layout:	
-4.      Select your preffered contact form layout, out of the 4  recommanded contact form layouts.
-5.      decide where to place your contact form fields' labels: you can place them above the text area, to the left of the text area or inside the text area.
-6.      Add or edit title text which will appear on the upper side of your contact form
-7.      Under "Form Fields" - edit and add new fields to your contact form. To add new fields, select the field type and click add. You can choose which fields are mandatory.
-8.      Edit your contact form "Colors & Fonts" - You can select one of vCita's recommended themes, or create your own theme. You could use the new theme you create for other contact form widgets you'll use.
-9.      You can preview all changes on the right.
-10.     Once doen, click "Done".
-11.     The contact form will be added to your website as a Contact page.
+= Build your contact form =
+1.      Make sure the "Contact Form" option is switched on and click on "Edit" to start customizing your contact form:.
+2.      Set your contact form layout. Select your preferred contact form layout out of the 4 recommended contact form layouts. You can later on change the contact form size using the "Grab Shortcode" option.
+3.      If you chose layouts which includes your information, click "Edit name, title and picture" to edit your profile information, and fill the "Test" field 
+4.      Decide where to place your contact form fields' labels: you can place them above the text area, to the left of the text area or inside the text area.
+5.      Under "Form Fields" tab - edit and add new fields to your contact form. To add a new field, select the field type and click "add". You can choose which fields are mandatory, edit the label text, change field order and more.
+6.      Edit your contact form "Colors & Fonts" - You can select one of vCita's recommended themes, or create your own theme. You could use the new theme you create for other contact form widgets you'll use.
+7.      You can preview all changes on the right.<BR>
+8.      Once done, click "Done".<BR>
+9.      The contact form will be added to your website as a new Contact page.
 
 = Add the contact form to an existing page = 
 1.      The contact form is automatically added to a new "Contact us" page.
 2.      To add the contact form to an existing page, click on "Grab Shortcodes" on the main contact form plugin page.
 3.      Copy the contact form Shortcode.
 4.      Past the contact form shortcode in the desired page.
+
+= Add the Active Engage to increase lead generation =
+1.	On the main contact form plugin screen, click "Edit" next to the "Active Engage" label.
+2.	Set the "Display settings". You can set the timing for the active engage to display. If you don't want it to automatically display, uncheck the "Automatically display" box. 
+3.	The active engage allows you to offer both contact and scheduling options to your website visitors. If you wish to disable the scheduling options, and offer only "leave message" option, uncheck the "Offer meeting and services" box.
+4.	Edit your Active engage texts. All the texts are editable, so you could perfectly adjust it to your business needs.
+5.	Edit the active engage Colors & Fonts. You can use an existing Theme out of the Themes list, or create a new one.
+6.	When done, click "Done" and make sure that the active engage option is "on" on the main plugin page.
+7.	If you wish to add the active engage to a specific page and not all website pages, please click "Add Active Engage on specific pages" on the editing screen.
+
+
 
 = Add scheduling options to your contact form =
 1.      With vCita contact form, you can offer your clients to book time with you- online, right from your contact form
