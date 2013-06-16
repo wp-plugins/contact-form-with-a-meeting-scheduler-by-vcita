@@ -1,41 +1,43 @@
-=== Contact Form Plugin for Wordpress  ===
+=== WordPress Contact Form Plugin by vCita  ===
 Contributors: vCita
 Donate link: http://www.vcita.com?invite=WP
-Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, forms plugin, contact button, feedback form, vCita
+Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, forms plugin, contact button, feedback form, vCita, cvita, Wordpress contact form, contact forms, 7, pop up, website pop up plugin
 Requires at least: 2.8
 Tested up to: 3.5.1
 Stable tag: trunk
  
-Contact form Plugin for Wordpress websites that will take your lead generation to new levels  
+Wordpress Contact form Plugin by vCita will take your websites’ lead generation to new levels of success 
 == Description ==
 
-Contact form builder that is uniquely designed for Wordpress
+
+WordPress contact form plugin by vCita was designed and built with WordPress developers in mind and will take your websites’ lead generation to new levels of success. <BR>
+**Its Free!** Download Our WordPress Contact Form Now.<BR>
 
 
 = Build the contact form you need: =
-* **Simple Contact Form**– choose a template and customize fields, colors, fonts and layout – no coding is required for our contact form.
-* **Dynamic Contact Form** – plugs at the bottom of every page on your site, and displays a contact button or a lightbox to generate more leads
-* Sidebar contact widget – sidebar plugin for any page 
+* **Simple Contact Form**– Choose a template and customize fields, colors, fonts and layout – no coding is required for our contact form for WordPress websites.
+* **Dynamic Contact Form** – Our contact form plugs in at the bottom of every page on your website, and displays a contact button or a lightBox to generate more leads.
+* **Sidebar contact widget** – Add a contact box to the sidebar of your website.
 
 
 = Free Contact Form Builder features: = 
 * Language customization for all texts and labels in the contact form. 
 * Text fields, numeric fields, text areas, and dropdown fields
 * Full customization of the contact form look and feel – layout, colors, size and more
-* Add your contact form to multiple Wordpress websites
+* Add your wordPress contact form to multiple websites
 
 
 = Contact Form plugin connects your Wordpress site with vCita providing more than just a web form: = 
 * Email & SMS notifications to multiple recipients on any contact form submission
-* Auto-response
-* Lead and contact management 
-* Clients tracking and archive
+* Auto-response to contact requests on your wordpress website
+* Lead and contact management
+* Clients tracking and contact form submissions archive
 * Admin control panel with contact form submission analytics 
-* Integrated online scheduling & appointment booking 
+* Integrated online scheduling and  appointment booking 
 * Integrated online payments and invoicing 
 * Integrated email marketing 
 <BR><BR>
-Learn more about our <a href ="http://www.vcita.com/contact_form?invite=WP">Contact Form</a>
+Learn more about our <a href ="http://www.vcita.com/contact_form?invite=WP">Contact Form for wordpress</a>
 
 
 http://www.youtube.com/watch?v=d4HCpbz8FKo
@@ -43,11 +45,8 @@ http://www.youtube.com/watch?v=d4HCpbz8FKo
 
 = Building Wordpress sites for others? = 
 
-Use one of our free contact form plugins for any website you help with. <BR>
-Special admin control panel is designed to make Wordpress plugin integration and management easy. <BR>
-
-
-
+Use one of our free contact form plugins for wordPress on any website you build and manage all vCita plugins from one dashbaord. <BR>
+Visit <a href ="http://www.vcita.com?invite=WP">www.vcita.com</a> for additional information
 
 == Installation ==
  
