@@ -1,4 +1,4 @@
-=== WordPress Contact Form Plugin by vCita  ===
+﻿=== WordPress Contact Form Plugin by vCita  ===
 Contributors: vCita
 Donate link: http://www.vcita.com?invite=WP
 Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, forms plugin, contact button, feedback form, vCita, cvita, Wordpress contact form, contact forms, 7, pop up, website pop up plugin
@@ -6,7 +6,7 @@ Requires at least: 2.8
 Tested up to: 3.5.1
 Stable tag: trunk
  
-Wordpress Contact form Plugin by vCita will take your websites’ lead generation to new levels of success 
+WordPress Contact form Plugin by vCita will take your websites’ lead generation to new levels of success 
 == Description ==
 
 
@@ -27,9 +27,9 @@ WordPress contact form plugin by vCita was designed and built with WordPress dev
 * Add your wordPress contact form to multiple websites
 
 
-= Contact Form plugin connects your Wordpress site with vCita providing more than just a web form: = 
+= Contact Form plugin connects your WordPress site with vCita providing more than just a web form: = 
 * Email & SMS notifications to multiple recipients on any contact form submission
-* Auto-response to contact requests on your wordpress website
+* Auto-response to contact requests on your WordPress website
 * Lead and contact management
 * Clients tracking and contact form submissions archive
 * Admin control panel with contact form submission analytics 
@@ -37,21 +37,21 @@ WordPress contact form plugin by vCita was designed and built with WordPress dev
 * Integrated online payments and invoicing 
 * Integrated email marketing 
 <BR><BR>
-Learn more about our <a href ="http://www.vcita.com/contact_form?invite=WP">Contact Form for wordpress</a>
+Learn more about our <a href ="http://www.vcita.com/contact_form?invite=WP">Contact Form for WordPress</a>
 
 
 http://www.youtube.com/watch?v=d4HCpbz8FKo
 <BR>
 
-= Building Wordpress sites for others? = 
+= Building WordPress sites for others? = 
 
-Use one of our free contact form plugins for wordPress on any website you build and manage all vCita plugins from one dashbaord. <BR>
+Use one of our free contact form plugins for wordPress on any website you build and manage all vCita plugins from one dashboard. <BR>
 Visit <a href ="http://www.vcita.com?invite=WP">www.vcita.com</a> for additional information
 
 == Installation ==
  
 
-= Contact Form Plugin Installation for Wordpress =
+= Contact Form Plugin Installation for WordPress =
 
 1.	Connect to WordPress Admin Panel
 2.	Click the "Plugins" menu on the left and choose "Add New".
@@ -60,7 +60,7 @@ Visit <a href ="http://www.vcita.com?invite=WP">www.vcita.com</a> for additional
 4.      Click on the new "vCita Contact Form" tab that is now available on your left bar.
 5.      Enter an email to which new contact requests and contact form submissions will be sent, and click "OK"
 6.      Enter your first name and last name in the pop-up window and click "Submit" and start building your contact form.
-7.      Our contact form plugin offers you 3 different widgets. You can add any of the widgets to your wordpress website. For best results – we recommend to add all 3 widgets.
+7.      Our contact form plugin offers you 3 different widgets. You can add any of the widgets to your wordPress website. For best results – we recommend to add all 3 widgets.
 
 = Build your contact form =
 1.      Make sure the "Contact Form" option is switched on and click on "Edit" to start customizing your contact form:.
@@ -128,7 +128,7 @@ This form can include your profile photo or logo and a brief invitation to conta
 = How do I customize the photo and text in my contact form or widget? =
 Once you enter your email, you will receive an email from vCita to complete your registration. (or you can do it directly from the plugin settings)<br>
 You will then have the option to customize your contact form, add your photo, set meeting preferences and schedule.<br>
-Once you are logged in to vCita, you can always change your contact form settings from the Wordpress plugin settings page.<br>
+Once you are logged in to vCita, you can always change your contact form settings from the WordPress plugin settings page.<br>
 <br>
 
 = Can I add the proactive contact form (Active Engage) to a specific page?  =
@@ -301,7 +301,7 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 
 = vCita Contact Form Version 3.0 = 
  * A new plugin management screen
- * All widgets editing can now be done directly from Wordpress
+ * All widgets editing can now be done directly from WordPress
  * Fix to Contact Sidebar disconnecion issue
  * New contact form color themes options 
 
