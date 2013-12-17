@@ -1,9 +1,9 @@
-﻿=== WordPress Contact Form Plugin by vCita  ===
+=== WordPress Contact Form Plugin by vCita  ===
 Contributors: vCita
 Donate link: http://www.vcita.com?invite=WP
 Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, forms plugin, contact button, feedback form, vCita, cvita, Wordpress contact form, contact forms, 7, pop up, website pop up plugin
 Requires at least: 2.8
-Tested up to: 3.5.1
+Tested up to: 3.8
 Stable tag: trunk
  
 WordPress Contact form Plugin by vCita will take your websites’ lead generation to new levels of success 
@@ -40,8 +40,8 @@ WordPress contact form plugin by vCita was designed and built with WordPress dev
 Learn more about our <a href ="http://www.vcita.com/contact_form?invite=WP">Contact Form for WordPress</a>
 
 
-http://www.youtube.com/watch?v=d4HCpbz8FKo
-<BR>
+https://www.youtube.com/watch?v=zFCzJJew63o#t=38
+
 
 = Building WordPress sites for others? = 
 
@@ -288,13 +288,22 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 == Screenshots ==
 
 1. **vCita Contact Form** - Fully customized form, with several layout options and full customization.
-1. **Customize colors and fonts** - Customize your contact form's colors, border styles, fonts and sizes.
-1. **Custom Fields** - Add, Edit and Remove fields with a simple drag and drop UI. 
 1. **Proactive Contact Form** - Don't wait for visitors to contact you, approach them on any page and double your leads!
+1. **Customize colors and fonts** - Customize your contact form's colors, border styles, fonts and sizes.
+1. **Multiple Layout Options to choose from** - Create the contact form that best fits your website. Your contact form can include different info and actions.
+1. **Custom Fields** - Add, Edit and Remove fields with a simple drag and drop UI.
+1. **Customize colors and fonts** - Customize your contact form's colors, border styles, fonts and sizes. 
+1. ** View full correspondence** -  View all client requests in one place, where you can also take action - reply, schedule a follow-up meeting and send an invoice.
 1. **Track and Manage contacts** - Keep history of contacts, manage contact details and track whether your messages are read by clients. 
 
 
+
 == Changelog == 
+= vCita Contact Form Version 3.2 = 
+ * Adjustments to WordPress "Parker" version 3.8
+ * Scheduling for multiple team members
+ * Scheduling and contact custom fields 
+
 = vCita Contact Form Version 3.1 = 
  * A direct link to profile settings
  * New contact form customization options: Fonts, font sizes, text box colors, new layouts, and more.
@@ -302,21 +311,21 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 = vCita Contact Form Version 3.0 = 
  * A new plugin management screen
  * All widgets editing can now be done directly from WordPress
- * Fix to Contact Sidebar disconnecion issue
+ * Fix to Contact Sidebar disconnection issue
  * New contact form color themes options 
 
 = vCita Contact Form Version 2.1.3 = 
- * Contact form fully integrats with facebook pages
+ * Contact form fully integrates with Facebook pages
  * More payments options 
  * Removed 24 hours scheduling notification
  * Full Spanish support
  * Contact form FAQ and tips enhancements
 
 = vCita Contact Form Version 2.1.2 =
- * Customized contact form fields and labels
+ * Customised contact form fields and labels
  * Add as many form fields as desired
  * Created contact form labels in any language! 
- * Customized contact form style, shape and colors
+ * Customised contact form style, shape and colors
  * All clients' details are available
  * Add Watermarks to specific fields
  * More contact from styles
@@ -331,14 +340,14 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
  * Improved Active Engage look and feel
  
  = vCita Contact Form Version 2.0.0 (13 May 2012) = 
- * Settings page now uses vCita site for much more customization options on your contact form
- * Redesign of the settings page to be simplier and contain more relevant information
+ * Settings page now uses vCita site for much more customisation options on your contact form
+ * Redesign of the settings page to be simpler and contain more relevant information
  * Changed to use the new API 
  * Fixed all warnings for referencing undefined array indices 
  * Updated FAQs
  
  = vCita Contact Form Version 1.4.6.2 =
- * Optimized confirm your account link
+ * Optimised confirm your account link
  
  = vCita Contact Form Version 1.4.6.1 =
  * Check for expert availability of upgrade 
@@ -385,3 +394,8 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
  * Created a new and simplified design for the Contact Form Settings page
  * Added the "Professional Title" field which can be specified while creating a new user
  * New screenshots
+
+== Upgrade Notice ==
+
+= vCita Contact Form Version 3.2 = 
+ * Adjustments to WordPress "Parker" version 3.8
