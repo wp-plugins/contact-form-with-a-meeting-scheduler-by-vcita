@@ -380,7 +380,7 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
  * Improved widget preview (Using the settings page)
  * Added FAQ
  
- = vCita Contact Form Version 1.2.2 =
+ = vCita Contact Form Version 1.2.2  =
  * Updated Documentation
  
  = vCita Contact Form Version 1.2.0 =
