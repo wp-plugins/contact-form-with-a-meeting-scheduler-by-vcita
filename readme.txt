@@ -4,7 +4,7 @@ Donate link: http://www.vcita.com?invite=WP
 Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, forms plugin, contact button, feedback form, vCita, cvita, Wordpress contact form, contact forms, 7, pop up, website pop up plugin
 Requires at least: 2.8
 Tested up to: 3.8
-Stable tag: 3.2.0
+Stable tag: trunk
  
 WordPress Contact form Plugin by vCita will take your websites’ lead generation to new levels of success 
 == Description ==
