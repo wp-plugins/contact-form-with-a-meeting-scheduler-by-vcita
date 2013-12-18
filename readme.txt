@@ -40,7 +40,7 @@ WordPress contact form plugin by vCita was designed and built with WordPress dev
 Learn more about our <a href ="http://www.vcita.com/contact_form?invite=WP">Contact Form for WordPress</a>
 
 
-https://www.youtube.com/watch?v=zFCzJJew63o#t=38
+http://www.youtube.com/watch?v=zFCzJJew63o
 
 
 = Building WordPress sites for others? = 
@@ -293,7 +293,7 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 1. **Multiple Layout Options to choose from** - Create the contact form that best fits your website. Your contact form can include different info and actions.
 1. **Custom Fields** - Add, Edit and Remove fields with a simple drag and drop UI.
 1. **Customize colors and fonts** - Customize your contact form's colors, border styles, fonts and sizes. 
-1. ** View full correspondence** -  View all client requests in one place, where you can also take action - reply, schedule a follow-up meeting and send an invoice.
+1. **View full correspondence** -  View all client requests in one place, where you can also take action - reply, schedule a follow-up meeting and send an invoice.
 1. **Track and Manage contacts** - Keep history of contacts, manage contact details and track whether your messages are read by clients. 
 
 
