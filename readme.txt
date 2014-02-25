@@ -1,4 +1,4 @@
-=== WordPress Contact Form Plugin by vCita  ===
+﻿=== WordPress Contact Form Plugin by vCita  ===
 Contributors: vCita
 Donate link: http://www.vcita.com?invite=WP
 Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, forms plugin, contact button, feedback form, vCita, cvita, Wordpress contact form, contact forms, 7, pop up, website pop up plugin
@@ -34,10 +34,10 @@ WordPress contact form plugin by vCita was designed and built with WordPress dev
 * Clients tracking and contact form submissions archive
 * Admin control panel with contact form submission analytics 
 * Integrated online scheduling and  appointment booking 
-* Integrated online payments and invoicing 
+* Integrated online payments client billing and invoicing - Create, print and email professional invoices with vCita <a href ="http://www.vcita.com/invoice_template?invite=WP">invoice template</a>
 * Integrated email marketing 
 <BR><BR>
-Learn more about our <a href ="http://www.vcita.com/contact_form?invite=WP">Contact Form for WordPress</a>
+Learn more about our <a href ="http://www.vcita.com/contact_form?invite=WP">Contact Form</a>
 
 
 http://www.youtube.com/watch?v=zFCzJJew63o
