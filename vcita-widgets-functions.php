@@ -71,7 +71,7 @@ function vcita_add_contact($atts) {
         'uid' => $vcita_widget['uid'],
         'id' => '',
         'title' => '',
-        'width' => '100%',
+        'width' => '500px',
         'height' => '450px',
     ), $atts));
 
@@ -102,7 +102,6 @@ function vcita_add_contact($atts) {
  * Create the The iframe HTML Tag according to the given paramters
  */
 function vcita_create_embed_code($type, $uid, $width, $height) {
-	$width = $width . "px";    
     // Only present if UID is available 
     if (isset($uid) && !empty($uid)) {        
 		// Load embed code from the cache if possible
