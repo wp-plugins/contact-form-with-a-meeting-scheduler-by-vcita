@@ -428,8 +428,8 @@ function is_page_available($vcita_widget) {
  */
 function add_contact_page() {
     return wp_insert_post(array(
-        'post_name' => 'Contact',
-        'post_title' => 'Contact',
+        'post_name' => 'contact-form',
+        'post_title' => 'Contact Us',
         'post_type' => 'page',
         'post_status' => 'publish',
         'comment_status' => 'closed',
