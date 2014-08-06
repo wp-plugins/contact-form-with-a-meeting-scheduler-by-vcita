@@ -4,14 +4,13 @@ Donate link: http://www.vcita.com?invite=WP
 Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, contact form 7, forms plugin, contact button, sidebar, feedback form, vCita, cvita, Wordpress contact form, contact forms, pop up, contact us, contact me, website pop up plugin
 Requires at least: 2.8
 Tested up to: 3.9.1
-Stable tag: 3.2.1
-
+Stable tag: 3.3.0
  
 WordPress Contact form Plugin by vCita will take your websites’ lead generation to new levels of success. 
 
 == Description ==
 
-WordPress contact form plugin by vCita was designed and built with WordPress developers in mind, to enhance your website and take your websites’ lead generation to new levels of success. <BR>
+Contact Form plugin by vCita was designed and built with WordPress developers in mind, to enhance your website and take your websites’ lead generation to new levels of success. <BR>
 vCita contact form can be customized to any purpose and perfectly match your website and brand.<BR><BR>
 **vCita Contact Form plugin is Free!** Download Our WordPress Contact Form Now.<BR>
 
@@ -300,6 +299,8 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 
 
 == Changelog == 
+= vCita Contact Form Version 3.2.2 =  * LiveSite widget for WordPress
+ * More contact management options
 = vCita Contact Form Version 3.2.1 =  
  * Text changes
 
