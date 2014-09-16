@@ -402,7 +402,8 @@ function vcita_admin_actions() {
 	    	</div>
 	    	<div class="clear"></div>
 	    	<div class="vcita-footer">
-	    		<a class="web-developers left" target="_blank" href="http://<?php echo VCITA_SERVER_BASE ?>/partners/web-professionals?invite=<?php echo VCITA_WIDGET_INVITE_CODE ?>"></a>
+	    		<a class="rate-us left" target="_blank" href="http://wordpress.org/support/view/plugin-reviews/contact-form-with-a-meeting-scheduler-by-vcita"></a>
+          <a class="web-developers left" target="_blank" href="http://<?php echo VCITA_SERVER_BASE ?>/partners/web-professionals?invite=<?php echo VCITA_WIDGET_INVITE_CODE ?>"></a>
 	    		<div class="more-offers left">
 	    			<div class="green">vCita has a lot more to offer!</div>
 	    			Visit <a target="_blank" href="http://<?php echo VCITA_SERVER_BASE ?>?invite=<?php echo VCITA_WIDGET_INVITE_CODE ?>">vCita</a> or <a href="http://www.vcita.com/education_center" class="show-in-popup" id="play-vcita-video">watch a video</a>
