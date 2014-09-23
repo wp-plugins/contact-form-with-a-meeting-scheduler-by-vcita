@@ -1,11 +1,13 @@
-=== Contact Form plugin by vCita ===
+﻿=== Contact Form Plugin by vCita ===
 Contributors: vCita
 Donate link: http://www.vcita.com?invite=WP
 Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, contact form 7, forms plugin, contact button, sidebar, easy contact form, email, feedback form, vCita, cvita, Wordpress contact form, crm, contact form crm, clients management, customer relations management, contact forms, pop up, contact us, contact me, website pop up plugin, online form
 Requires at least: 2.8
 Tested up to: 4.0
-Stable tag: 3.3.1
+Stable tag: 3.3.2
+
 License: GPLv2 or later
+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
  
 Contact Form Plugin by vCita will help you capture more leads on your WordPress website and manage your contacts more effectively
@@ -15,7 +17,7 @@ Contact Form plugin by vCita was designed and built with WordPress developers in
 Use vCita Contact Form Builder to create beautiful forms in seconds - customized to any purpose and perfectly match your website and brand.<BR><BR>
 
 **vCita Contact Form is Free!** Download Our WordPress Contact Form Now.<BR>
-
+The plugin connects to your vCita account. You may create a FREE account at vCita directly from the plugin.
 
 
 >[Plugin homepage](https://www.vcita.com/software/wordpress_contact_form?o=WP&invite=WP "vCita contact form for WordPress") | [Video Tutorials](http://www.vcita.com/education_center "tutorials") | [FAQ & Support](http://support.vcita.com/home "vCita support forum") | [For Web Professionals](https://www.vcita.com/partners/web-professionals?invite=WP&o=WP "partners")
@@ -331,6 +333,9 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 
 
 == Changelog == 
+= vCita Contact Form Version 3.3.2 =  
+ * Compatibility with 4.0
+ * Few Bugs Fixed
 
 = vCita Contact Form Version 3.3.0 =  
  * LiveSite widget for WordPress
