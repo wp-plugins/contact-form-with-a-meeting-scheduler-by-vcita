@@ -4,7 +4,7 @@ Donate link: http://www.vcita.com?invite=WP
 Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, contact form 7, forms plugin, contact button, sidebar, easy contact form, email, feedback form, vCita, cvita, Wordpress contact form, crm, contact form crm, clients management, customer relations management, contact forms, pop up, contact us, contact me, website pop up plugin, online form
 Requires at least: 2.8
 Tested up to: 4.0
-Stable tag: 3.3.2
+Stable tag: 3.4.0
 
 License: GPLv2 or later
 
@@ -333,6 +333,10 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 
 
 == Changelog == 
+= vCita Contact Form Version 3.4.0 =  
+ * Compatibility with 4.0
+ * Improved payment options
+
 = vCita Contact Form Version 3.3.2 =  
  * Compatibility with 4.0
  * Few Bugs Fixed

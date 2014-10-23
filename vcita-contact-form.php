@@ -3,7 +3,7 @@
 Plugin Name: Contact Form by vCita
 Plugin URI: http://www.vcita.com
 Description: Contact form by vCita proves to increase the number of contact form requests 
-Version: 3.3.1
+Version: 3.4.0
 Author: vCita.com
 Author URI: http://www.vcita.com
 */
