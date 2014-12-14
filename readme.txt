@@ -1,7 +1,7 @@
-﻿=== Contact Form Plugin by vCita ===
+=== Contact Form Plugin by vCita ===
 Contributors: vCita
 Donate link: http://www.vcita.com?invite=WP
-Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, contact form 7, forms plugin, contact button, sidebar, easy contact form, email, feedback form, vCita, cvita, Wordpress contact form, crm, contact form crm, clients management, customer relations management, contact forms, pop up, contact us, contact me, website pop up plugin, online form
+Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, contact form 7, forms plugin, contact button, sidebar, easy contact form, email, feedback form, vCita, cvita, Wordpress contact form, crm, contact form crm, clients management, customer relations management, contact forms, pop up, contact us, contact me, website pop up plugin
 Requires at least: 2.8
 Tested up to: 4.0.1
 Stable tag: 3.6.0
