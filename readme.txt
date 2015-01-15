@@ -1,10 +1,10 @@
-=== Contact Form Plugin by vCita ===
+﻿=== Contact Form Plugin by vCita ===
 Contributors: vCita
 Donate link: http://www.vcita.com?invite=WP
-Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, contact form 7, forms plugin, contact button, sidebar, easy contact form, email, feedback form, vCita, cvita, Wordpress contact form, crm, contact form crm, clients management, customer relations management, contact forms, pop up, contact us, contact me, website pop up plugin
+Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, contact form 7, forms plugin, contact button, sidebar, easy contact form, email, feedback form, vCita, cvita, Wordpress contact form, wp form, contact form crm, contact management, customer relations management, contact forms, pop up, contact us, contact me, website pop up plugin, online form
 Requires at least: 2.8
-Tested up to: 4.0.1
-Stable tag: 3.6.0
+Tested up to: 4.1
+Stable tag: 3.7.0
 
 License: GPLv2 or later
 
@@ -13,19 +13,24 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Contact Form Plugin by vCita will help you capture more leads on your WordPress website and manage your contacts more effectively
 == Description ==
 
-Contact Form plugin by vCita was designed and built with WordPress developers in mind, to enhance your website and take your websites’ lead generation to new levels of success. <BR>
-Use vCita Contact Form Builder to create beautiful forms in seconds - customized to any purpose and perfectly match the website and brand.<BR>
+Contact Form plugin by vCita is the ultimate way to capture and manage leads on your WordPress site.<BR>
+Use vCita **Contact Form Builder** to create and integrate beautiful forms in seconds - customized to any purpose and perfectly match the website and brand.<BR>
+All form submissions will be sent to your email, as well as added to your **vCita CRM** where you can manage all your contacts and leads more effectively.
 
 = Build the contact form you need in seconds - no coding required: =
-* **Classic Form**– Choose a contact form template and customize the contact form fields, colors, fonts and layout.
+* **Classic Form**– Choose a form template and customize the fields, colors, fonts and layout.
 * **Active Form -  LiveSite widget** – Helps you generate new sales opportunities, and encourage more visitors and potential clients to take action: send a message, schedule an appointment, upload documents and pay for services, any time, using any device
 * **Sidebar contact widget** – Add a contact box to the sidebar of your website.
 
-Add your contact form to any page or post on your wordpress site using shortcode
+Add your contact form to any page or post using shortcode
 
+= Keep all form submissions in one place and manage your leads in an effective way: = 
+* Get an unlimited archive for contacts and client communication.
+* Easily search for contacts and follow up: take notes, edit contact information and track sent emails.
+* Receive instant notifications for every form submission or contact request on your site via Email or SMS.
+ 
 **vCita Contact Form is Free!** Download Our WordPress Contact Form Now.<BR>
 The plugin connects to your vCita account. You may create a FREE account at vCita directly from the plugin.
-
 
 >[Plugin homepage](https://www.vcita.com/software/wordpress_contact_form?o=WP&invite=WP "vCita contact form for WordPress") | [Video Tutorials](http://www.vcita.com/education_center "tutorials") | [FAQ & Support](http://support.vcita.com/home "vCita support forum") | [For Web Professionals](https://www.vcita.com/partners/web-professionals?invite=WP&o=WP "partners")
 
@@ -44,7 +49,7 @@ http://www.youtube.com/watch?v=zFCzJJew63o
 * Assign contact requests to different staff members
 * Easy to use contact form builder
 <BR>
-= The contact form plugin is fully translated to: = 
+= vCita contact form is now available in the following Languages: = 
 * English
 * Spanish
 * Franch
@@ -343,6 +348,8 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 
 
 == Changelog == 
+= vCita Contact Form Version 3.7.0 = 
+ * Compatibility with WordPress 4.1
 
 = vCita Contact Form Version 3.6.0 =  
  * Complete Spanish translation
