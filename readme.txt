@@ -4,7 +4,7 @@ Donate link: http://www.vcita.com?invite=WP
 Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, contact form 7, forms plugin, contact button, sidebar, easy contact form, email, feedback form, vCita, cvita, Wordpress contact form, wp form, contact form crm, contact management, customer relations management, contact forms, pop up, contact us, contact me, website pop up plugin, online form
 Requires at least: 2.8
 Tested up to: 4.1
-Stable tag: 3.7.0
+Stable tag: 3.8.0
 
 License: GPLv2 or later
 
@@ -348,6 +348,13 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 
 
 == Changelog == 
+= vCita Contact Form Version 3.8.0 = 
+* New design for the email notifications sent from vCita to you & your clients
+* More customization for the emails including branding colors and logo
+* New! Email signature option was added
+* Enhencements with scheduling settings to prevent appointments from being scheduled to far in advance
+
+
 = vCita Contact Form Version 3.7.0 = 
  * Compatibility with WordPress 4.1
 
@@ -474,8 +481,5 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 
 == Upgrade Notice ==
 
-= vCita Contact Form Version 3.2 = 
- * Adjustments to WordPress "Parker" version 3.8
-= Contact Form plugin by vCita Version 3.3.0 = 
- * Announcing LiveSite - designed specifically for small businesses, and makes your WordPress website more effective in generating new business and helps you deliver amazing service.
- * LiveSite provides your clients a personalized experience when they visit your website - transforming your website into a self-service client portal.
+= vCita Contact Form Version 3.8.0 = 
+New design for the email notifications sent from vCita to you & your clients
