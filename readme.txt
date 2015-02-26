@@ -4,13 +4,13 @@ Donate link: http://www.vcita.com?invite=WP
 Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, contact form 7, forms plugin, contact button, sidebar, easy contact form, email, feedback form, vCita, cvita, Wordpress contact form, wp form, contact form crm, contact management, customer relations management, contact forms, pop up, contact us, contact me, website pop up plugin, online form
 Requires at least: 2.8
 Tested up to: 4.1
-Stable tag: 3.8.0
+Stable tag: 3.9.0
 
 License: GPLv2 or later
 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
  
-Contact Form Plugin by vCita will help you capture more leads on your WordPress website and manage your contacts more effectively
+Contact Form Builder that will help you capture more leads on your WordPress website and manage your contacts more effectively
 == Description ==
 
 Contact Form plugin by vCita is the ultimate way to capture and manage leads on your WordPress site.<BR>
@@ -348,6 +348,12 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 
 
 == Changelog == 
+= vCita Contact Form Version 3.9.0 = 
+* New - collect payments using Stripe.
+* Customize and better control the automatic email notifications sent to your clients and your business. 
+* Set Future Booking Cut-Off Date 
+* More Layouts for the LiveSite Widget
+
 = vCita Contact Form Version 3.8.0 = 
 * New design for the email notifications sent from vCita to you & your clients
 * More customization for the emails including branding colors and logo
@@ -481,5 +487,8 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 
 == Upgrade Notice ==
 
-= vCita Contact Form Version 3.8.0 = 
-New design for the email notifications sent from vCita to you & your clients
+= vCita Contact Form Version 3.9.0 = 
+* New - collect payments using Stripe.
+* Customize and better control the automatic email notifications sent to your clients and your business. 
+* Set Future Booking Cut-Off Date 
+* More Layouts for the LiveSite Widget
