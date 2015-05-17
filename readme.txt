@@ -3,8 +3,8 @@ Contributors: vCita
 Donate link: http://www.vcita.com?invite=WP
 Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, contact form 7, forms plugin, contact button, sidebar, easy contact form, email, feedback form, vCita, cvita, Wordpress contact form, wp form, contact form crm, contact management, customer relations management, contact forms, pop up, contact us, contact me, website pop up plugin, online form
 Requires at least: 2.8
-Tested up to: 4.1
-Stable tag: 3.9.0
+Tested up to: 4.2.2
+Stable tag: 3.9.5
 
 License: GPLv2 or later
 
@@ -49,14 +49,17 @@ http://www.youtube.com/watch?v=zFCzJJew63o
 * Assign contact requests to different staff members
 * Easy to use contact form builder
 <BR>
-= vCita contact form is now available in the following Languages: = 
+= Translations= 
+vCita is fully translated to:
+ 
 * English
 * Spanish
-* Franch
+* French
+* Portuguese
 * Polish
 * Hebrew
 
-Don't see your language here? You can manually change the contact form labels, buttons and other texts to your language.
+Don't see your language here? You can manually change the contact form labels, buttons and other texts to show in your language!
 <BR>
 
 = vCita Contact Form plugin connects your WordPress site with vCita providing more than just a web contact form: = 
@@ -348,6 +351,10 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 
 
 == Changelog == 
+= vCita Contact Form Version 3.9.5 = 
+ * Compatibility with WordPress 4.2
+ * New! SMS reminders to clients
+ 
 = vCita Contact Form Version 3.9.0 = 
 * New - collect payments using Stripe.
 * Customize and better control the automatic email notifications sent to your clients and your business. 
@@ -487,8 +494,6 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 
 == Upgrade Notice ==
 
-= vCita Contact Form Version 3.9.0 = 
-* New - collect payments using Stripe.
-* Customize and better control the automatic email notifications sent to your clients and your business. 
-* Set Future Booking Cut-Off Date 
-* More Layouts for the LiveSite Widget
+= vCita Contact Form Version 3.9.5 = 
+ * Compatibility with WordPress 4.2
+ * New! SMS reminders to clients
