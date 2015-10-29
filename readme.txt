@@ -3,8 +3,8 @@ Contributors: vCita
 Donate link: http://www.vcita.com?invite=WP
 Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, contact form 7, forms plugin, contact button, sidebar, easy contact form, email, feedback form, vCita, cvita, Wordpress contact form, wp form, contact form crm, contact management, customer relations management, contact forms, pop up, contact us, contact me, website pop up plugin, online form, vCita, FR - Appel à l'action, capture de prospects, génération de prospects, formulaire de contact popup, campagne mail, facture, facturation, formulaire de contact wordpress, module formulaire de contact wordpress, français, ES-formulario de contacto, gestión de contactos, formulario de contacto fácil, formulario de contactogratis,formulario de contacto de CRM, formularioen línea, formulario de contactowordpress, español, formulário de contato, gestão de contato, formulário de contato fácil, formulário de contato de CRM, formulário de contato gratuito, formulário online, formulário de contato wordpress, português
 Requires at least: 2.8
-Tested up to: 4.3
-Stable tag: 3.10.0
+Tested up to: 4.3.1
+Stable tag: 4.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
  
@@ -21,9 +21,8 @@ All form submissions will be sent to your email, as well as added to your **vCit
 * Quickly view and reply on-the-go with the vCita Mobile App for <a href="https://itunes.apple.com/il/app/vcita-mobile-crm/id1025423769?mt=8">iPhone</a> or <a href="https://play.google.com/store/apps/details?id=com.vcita.mobileapp">Android</a>
  
 = Build the contact form you need in seconds - no coding required: =
-* **Classic Contact Form**– Choose a layout from our template bank, and customize the fields, colors and fonts  
+* **Classic Contact Form**– Choose a layout and customize the contact form fields, colors and fonts  
 * **Active Contact Form -  LiveSite Widget** – Helps you capture more leads on your site! The widget encourages more visitors and potential clients to take action and contact your team: send a message, schedule an appointment, upload documents or even pay for services, any time, using any device
-* **Sidebar contact widget** – Minimized contact form that can be added to the sidebar of your website.
 
 You can add your contact form to any page or post using shortcode
 
@@ -63,7 +62,6 @@ vCita Contact Form Builder plugin is fully translated to:
 * Portuguese
 * Polish
 * Hebrew
-* Russian - Coming soon!
 
 Don't see your language here? You can manually change the contact form labels, buttons and other texts to show in your language!
 <BR>
@@ -383,6 +381,10 @@ vCita LiveSite Pack offers a verity of contact forms. You can use a classic cont
 
 
 == Changelog == 
+= vCita Contact Form Version 4.0.0 = 
+ * Completely new design with more widget options for your site
+ * Compatibility with WordPress 4.3.1
+
 = vCita Contact Form Version 3.10.0 = 
  * Compatibility with WordPress 4.3
  * Scheduling form customization per service
@@ -529,5 +531,5 @@ vCita LiveSite Pack offers a verity of contact forms. You can use a classic cont
 
 == Upgrade Notice ==
 
-= vCita Contact Form Version 3.10.0 = 
- * Scheduling form customization per service + Compatibility with WordPress 4.3
+= vCita Contact Form Version 4.0.0 = 
+Completely new design with much widget options for your site
