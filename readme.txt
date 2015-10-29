@@ -1,35 +1,38 @@
-﻿=== Contact Form Plugin by vCita ===
+﻿=== Contact Form Builder by vCita ===
 Contributors: vCita
 Donate link: http://www.vcita.com?invite=WP
-Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, contact form 7, forms plugin, contact button, sidebar, easy contact form, email, feedback form, vCita, cvita, Wordpress contact form, wp form, contact form crm, contact management, customer relations management, contact forms, pop up, contact us, contact me, website pop up plugin, online form
+Tags: contact form, contact us form, free contact form, form builder, web form, HTML form, form  maker, custom forms, contact form 7, forms plugin, contact button, sidebar, easy contact form, email, feedback form, vCita, cvita, Wordpress contact form, wp form, contact form crm, contact management, customer relations management, contact forms, pop up, contact us, contact me, website pop up plugin, online form, vCita, FR - Appel à l'action, capture de prospects, génération de prospects, formulaire de contact popup, campagne mail, facture, facturation, formulaire de contact wordpress, module formulaire de contact wordpress, français, ES-formulario de contacto, gestión de contactos, formulario de contacto fácil, formulario de contactogratis,formulario de contacto de CRM, formularioen línea, formulario de contactowordpress, español, formulário de contato, gestão de contato, formulário de contato fácil, formulário de contato de CRM, formulário de contato gratuito, formulário online, formulário de contato wordpress, português
 Requires at least: 2.8
-Tested up to: 4.2.2
-Stable tag: 3.9.5
-
+Tested up to: 4.3
+Stable tag: 3.10.0
 License: GPLv2 or later
-
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
  
-Contact Form Builder that will help you capture more leads on your WordPress website and manage your contacts more effectively
+Contact Form Builder that helps you capture more leads on your WordPress website and manage your contacts more effectively
 == Description ==
 
-Contact Form plugin by vCita is the ultimate way to capture and manage leads on your WordPress site.<BR>
-Use vCita **Contact Form Builder** to create and integrate beautiful forms in seconds - customized to any purpose and perfectly match the website and brand.<BR>
+Contact Form plugin by vCita is the ultimate way to capture and manage leads on your WordPress website.<BR>
+Use vCita **Contact Form Builder** to create and integrate beautiful forms in seconds - customized to any purpose and perfectly match the website theme and design.<BR>
 All form submissions will be sent to your email, as well as added to your **vCita CRM** where you can manage all your contacts and leads more effectively.
 
+* Receive all contact form submissions to your email
+* Set multiple recepient to receive the contact form submissions.
+* Get real time mobile (SMS) notifications and never miss a customer
+* Quickly view and reply on-the-go with the vCita Mobile App for <a href="https://itunes.apple.com/il/app/vcita-mobile-crm/id1025423769?mt=8">iPhone</a> or <a href="https://play.google.com/store/apps/details?id=com.vcita.mobileapp">Android</a>
+ 
 = Build the contact form you need in seconds - no coding required: =
-* **Classic Form**– Choose a form template and customize the fields, colors, fonts and layout.
-* **Active Form -  LiveSite widget** – Helps you generate new sales opportunities, and encourage more visitors and potential clients to take action: send a message, schedule an appointment, upload documents and pay for services, any time, using any device
-* **Sidebar contact widget** – Add a contact box to the sidebar of your website.
+* **Classic Contact Form**– Choose a layout from our template bank, and customize the fields, colors and fonts  
+* **Active Contact Form -  LiveSite Widget** – Helps you capture more leads on your site! The widget encourages more visitors and potential clients to take action and contact your team: send a message, schedule an appointment, upload documents or even pay for services, any time, using any device
+* **Sidebar contact widget** – Minimized contact form that can be added to the sidebar of your website.
 
-Add your contact form to any page or post using shortcode
+You can add your contact form to any page or post using shortcode
 
 = Keep all form submissions in one place and manage your leads in an effective way: = 
-* Get an unlimited archive for contacts and client communication.
+* Every customer interaction is saved in unlimited archive for contacts and client communication.
 * Easily search for contacts and follow up: take notes, edit contact information and track sent emails.
-* Receive instant notifications for every form submission or contact request on your site via Email or SMS.
+* Receive instant notifications for every form submission or contact request on your site via Email or Mobile (SMS).
  
-**vCita Contact Form is Free!** Download Our WordPress Contact Form Now.<BR>
+**vCita Contact Form Plugin can be used free forever, and also offers several premium options** Download Our WordPress Contact Form Now.<BR>
 The plugin connects to your vCita account. You may create a FREE account at vCita directly from the plugin.
 
 >[Plugin homepage](https://www.vcita.com/software/wordpress_contact_form?o=WP&invite=WP "vCita contact form for WordPress") | [Video Tutorials](http://www.vcita.com/education_center "tutorials") | [FAQ & Support](http://support.vcita.com/home "vCita support forum") | [For Web Professionals](https://www.vcita.com/partners/web-professionals?invite=WP&o=WP "partners")
@@ -49,20 +52,23 @@ http://www.youtube.com/watch?v=zFCzJJew63o
 * Assign contact requests to different staff members
 * Easy to use contact form builder
 <BR>
-= Translations= 
-vCita is fully translated to:
+
+= Translations = 
+vCita Contact Form Builder plugin is fully translated to:
  
 * English
 * Spanish
 * French
+* Russian
 * Portuguese
 * Polish
 * Hebrew
+* Russian - Coming soon!
 
 Don't see your language here? You can manually change the contact form labels, buttons and other texts to show in your language!
 <BR>
 
-= vCita Contact Form plugin connects your WordPress site with vCita providing more than just a web contact form: = 
+= vCita Contact Form plugin connects your WordPress site with vCita , providing more than just a web contact form: = 
 * **Anytime, Anywhere, Contact.**  Prospects and clients are encouraged to contact you when they visit your site, and can contact you from anywhere on any device.
 * **Deliver amazing service**. Receive Email & SMS notifications to multiple recipients on any contact form submission, and provide immediate follow-up using any device. 
 * **Manage your clients**. Organize and archive any client who contacts you using your WordPress contact form plugin. Easily search for contacts and follow up: take notes, edit contact information, and track sent emails.
@@ -349,8 +355,38 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 1. **Track and Manage contacts** - Keep history of contacts, manage contact details and track whether your messages are read by clients. 
 
 
+== More About vCita Contact Form  ==
+vCita LiveSite Pack offers a verity of contact forms. You can use a classic contact form, add different fields to your contact form so it matches your business needs, create an active contact form to greet your website visitors on every page and more.
+
+ = What does the basic contact form include? = 
+ * The basic contact form allows you to create customized contact form and add it to your WordPress website with ease.
+ * You can add and edit unlimited number of fields to your contact form
+ * The contact form can include a logo image, a short description of your business and a scheduling button.
+ * The Contact form can be added to multiple websites and pages.
+ * Contact form design and layout is easy to customize.
+
+ = What does the active contact form include? =
+ * The active contact form (LiveSite Widget) is a lead engagement contact form widget that can be added at the bottom of your website. 
+ * It include several contact form options such as leave detalis contact form, scheduling contact form, payment form and upload file contact form.
+ * The active contact form is automatically added to all pages on the website, and can be added to multiple sites.
+ * Active contact form is a proven way to increase the number of leads and customers generated on your site.
+ * The active contact form can be fully customized to represent your business needs. This includes all texts, colors, layout and call to actions.
+
+ = How can I manage contacts with vCita? = 
+ * vCita Active contact form helps you generate more leads and contacts from your website.
+ * All contact form submissions are delivered to your vCita Backoffice, were you can view, search and edit contacts, mark for follow-ups and more.
+
+ = vCita contact form is available in any language = 
+ * All form fields, buttons and other texts are fully editable and can be changed to any language.
+ * vCita is already fully translated to: English, Spanish, Portuguese, French, Russian, Polish and Hebrew.
+
+
 
 == Changelog == 
+= vCita Contact Form Version 3.10.0 = 
+ * Compatibility with WordPress 4.3
+ * Scheduling form customization per service
+
 = vCita Contact Form Version 3.9.5 = 
  * Compatibility with WordPress 4.2
  * New! SMS reminders to clients
@@ -366,7 +402,6 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 * More customization for the emails including branding colors and logo
 * New! Email signature option was added
 * Enhencements with scheduling settings to prevent appointments from being scheduled to far in advance
-
 
 = vCita Contact Form Version 3.7.0 = 
  * Compatibility with WordPress 4.1
@@ -494,6 +529,5 @@ Please visit <a href="http://www.vcita.com/about/privacy_policy?invite=WP">Priva
 
 == Upgrade Notice ==
 
-= vCita Contact Form Version 3.9.5 = 
- * Compatibility with WordPress 4.2
- * New! SMS reminders to clients
+= vCita Contact Form Version 3.10.0 = 
+ * Scheduling form customization per service + Compatibility with WordPress 4.3
